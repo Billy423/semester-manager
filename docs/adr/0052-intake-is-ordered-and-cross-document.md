@@ -1,0 +1,9 @@
+# Intake is ordered and cross-document; no artifact is understood alone
+
+The governing artifact is ingested before the artifacts it governs, and no file is understood in isolation: assignment bodies carry markers that decode only against another document - a superscript notation attached to exactly the words a concept edge would want, which reads as nothing without its key - and deadlines hide in the prose of governing documents, as with *"it is your duty to form teams by the end of Week 1"*, which appears in a course guide and nowhere else. **Which artifact governs is course-specific and must never be assumed** - in one measured course every grade weight, the late-day policy, the participation rule and the conditional weighting live on page 8 of the Week 1 lecture deck rather than in the outline, so an ingest order prioritising outlines and handouts would miss every weight in that course. Where every handout defers the date to the portal, the pasted portal screenshot is the **primary** deadline path for that course rather than an enrichment of one - **also course-specific: another measured course's handouts carry their own due dates.**
+
+Measured: a full multimodal pass over nine assignment PDFs, each saying verbatim *"see the portal for the due date"*, yields an obligation layer with **zero deadlines** and no error. Extraction is **title-scoped, not full-text** - full-text finds mention, title-scoped finds coverage.
+
+What is removed from the older statement of this ruling is the assumption that the outline is the governing artifact. What remains open, and is Billy's: **what determines ingest order for a course whose governing artifact has not been identified.**
+
+Source: fall26:records/domain/model.md §10 items 7 and 8; the two corrections at fall26:records/findings/read-cycle.md §7
