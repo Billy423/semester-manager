@@ -4,7 +4,7 @@
 
 Each record is a title plus one to three sentences and a provenance path. The title states the decision, not the topic, so it can be triaged without opening the file.
 
-A `Source:` line names where the decision was originally made - the predecessor corpus at `~/Documents/Projects/fall26` for a migrated record, the issue it was ruled in for one ruled here. It is an **audit trail, not a reading instruction**: every record stands on its own, and needing to open the source to act on one is a defect in that record.
+A `Source:` line names where the decision was originally made - the predecessor corpus at `~/Documents/Projects/fall26` or the `openclaw` checkout for a migrated record, the issue it was ruled in for one ruled here. It is an **audit trail, not a reading instruction**: every record stands on its own, and needing to open the source to act on one is a defect in that record.
 
 ## Purpose and trust — `0001`–`0007` · `0081`
 
