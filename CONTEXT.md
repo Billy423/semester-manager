@@ -168,6 +168,10 @@ _Avoid_: *the active window* for band A - the window is one of three triggers, n
 The single long-running agent conversation the owner talks to: it holds ring 0, dispatches, walks the graph and writes the plan. A **conversation**, not a process - its scale is days to weeks, and **resident** means held in the conversation's context, never in a process's memory.
 _Avoid_: master session · *the agent* (bare) · orchestrator · "the coordinator's lifetime" without saying which one
 
+**holder**:
+Something that answers from what it holds: today the **coordinator** alone, and what it holds is the skeleton and the store. A dispatch target is not one - it returns a conclusion and keeps no state. Neither is the owner: an asked answer becomes held, which does not make the one asked a holder. Ring 0 is not one either - it is a residency policy, not a thing held.
+_Avoid_: source · owner · treating the skeleton and the store as holders in their own right
+
 **the walk**:
 The operation that follows a node's edges and reads its neighbours' definitions. Deterministic, and it touches neither the store nor embeddings.
 _Avoid_: search · find_material · retrieval · treating the walk and a by-query store read as one operation
