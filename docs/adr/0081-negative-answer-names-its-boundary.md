@@ -1,6 +1,6 @@
 # A negative answer names the boundary it speaks for; a bare "it is not known" shifts the burden to the reader
 
-**faithfulness** is three axes and recall is one of them, so it is not a promise of complete recall: each **holder** answers for what it holds - today the coordinator alone, and what it holds is the skeleton and the store. The obligation that follows is on the negative answer - it states the boundary it is speaking for, because a bare *it is not known* leaves the reader unable to tell **not held** from **not found**, and deciding between those two is exactly the burden the system exists to remove. `0022` is the same rule at the write end: an empty extraction is reported rather than passed over in silence.
+**faithfulness** is three axes and recall is one of them, so it is not a promise of complete recall: each **holder** answers for its own boundary - today the coordinator alone, answering from the skeleton and the store, which it queries rather than holds resident (`0044`). The obligation that follows is on the negative answer - it states the boundary it is speaking for, because a bare *it is not known* leaves the reader unable to tell **not held** from **not found**, and deciding between those two is exactly the burden the system exists to remove. `0022` is the same rule at the write end: an empty extraction is reported rather than passed over in silence.
 
 ## Consequences
 
