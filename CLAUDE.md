@@ -21,7 +21,7 @@ The five canonical triage roles, used verbatim as GitHub label strings. See `doc
 
 Single-context: `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
 
-`docs/adr/README.md` is the index and the reading path; the eighty records are reference. A `Source:` line in a record is an audit trail, not a reading instruction.
+`docs/adr/README.md` is the index and the reading path; the records themselves are reference. A `Source:` line in a record is an audit trail, not a reading instruction.
 
 ## Working discipline
 
