@@ -33,6 +33,8 @@ The working form of this: four subagents blind to each other and blind to the tw
 
 This is an earned correction, not a preference. The 2026-08-22 seal was built from symlinks, and `ls -la` prints symlink targets - so the first command a shell-using agent naturally runs defeated it. Two agents hit the leak and both self-reported. One had seen the ground truth verbatim, so its induced partition is contaminated and only its structural findings stand. For the other, no re-run was ordered, because the grouping it was asked to induce had three carriers and only one was sealed: the folder name was sealed, but the PDF `Title` metadata and the rendered title slide carried the same grouping, and one of those carriers is the content itself. **A property carried by the content was never withholdable, and sealing the filename does not make it so** - check the carriers before you claim a run was blind.
 
+**A named carrier, found the same way and in the same class: the run's own tool source.** `tools.py` was readable in every run directory of the 2026-08-23 read-cycle material, so a run could learn what a verb would return without calling it - an apparatus leak present since the first run, and one a deployed assistant would not have. The harness itself read `tools.py` before calling anything, so it saw the clock, the log call and a truncation constant. **A run directory is part of the run's context: what is on disk beside the agent is a carrier, not scaffolding.**
+
 Two further constraints on any blind extraction run:
 
 - **No re-picking. A bad extraction is a finding**, and it is reported as one. Swapping in a better input after seeing the result destroys the run.
