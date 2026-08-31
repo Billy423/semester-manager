@@ -169,7 +169,7 @@ The single long-running agent conversation the owner talks to: it holds ring 0, 
 _Avoid_: master session · *the agent* (bare) · orchestrator · "the coordinator's lifetime" without saying which one
 
 **holder**:
-Something that answers from what it holds: today the **coordinator** alone, and what it holds is the skeleton and the store. A dispatch target is not one - it returns a conclusion and keeps no state. Neither is the owner: an asked answer becomes held, which does not make the one asked a holder. Ring 0 is not one either - it is a residency policy, not a thing held.
+Something that can answer from state it keeps: today the **coordinator** alone, and what it answers from is the skeleton and the store, which it **queries** rather than holds resident (`0044`). A dispatch target is not one - it returns a conclusion and keeps no state. Neither is the owner: an asked answer is kept by the system, which does not make the one asked a holder. Ring 0 is not one either - it is a residency policy.
 _Avoid_: source · owner · treating the skeleton and the store as holders in their own right
 
 **the walk**:
