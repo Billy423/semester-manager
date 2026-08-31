@@ -1,12 +1,12 @@
 # Decision records
 
-Eighty decisions, migrated from a two-week design effort. **This index is the reading path; the records themselves are reference.** Scan a group, open what applies.
+**This index is the reading path; the records themselves are reference.** Scan a group, open what applies.
 
 Each record is a title plus one to three sentences and a provenance path. The title states the decision, not the topic, so it can be triaged without opening the file.
 
-A `Source:` line names where the decision was originally made, in `~/Documents/Projects/fall26`. It is an **audit trail, not a reading instruction**: every record stands on its own, and needing to open the source to act on one is a defect in that record.
+A `Source:` line names where the decision was originally made - the predecessor corpus at `~/Documents/Projects/fall26` for a migrated record, the issue it was ruled in for one ruled here. It is an **audit trail, not a reading instruction**: every record stands on its own, and needing to open the source to act on one is a defect in that record.
 
-## Purpose and trust — `0001`–`0007`
+## Purpose and trust — `0001`–`0007` · `0081`
 
 What the system is for, and what it refuses to claim. Every other decision is judged against these.
 
@@ -19,6 +19,7 @@ What the system is for, and what it refuses to claim. Every other decision is ju
 | [`0005`](0005-the-store-accumulates-it-is-never-synced.md) | The store accumulates; it is never synchronised against a source |
 | [`0006`](0006-under-model-deliberately.md) | Under-model deliberately: the relationships cannot be written today |
 | [`0007`](0007-park-with-a-wake-condition.md) | Undecided and unimportant questions are parked with the condition that would wake them |
+| [`0081`](0081-negative-answer-names-its-boundary.md) | A negative answer names the boundary it speaks for; a bare "it is not known" shifts the burden to the reader |
 
 ## The graph — `0008`–`0023`
 

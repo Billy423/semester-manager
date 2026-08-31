@@ -219,8 +219,8 @@ _Avoid_: deprecated fields · the exclusion list · *deliberately absent* as the
 ### The project's own words
 
 **faithfulness**:
-The system's promise about its own claims: every claim traces to a fact the system holds, no relevant held fact is omitted, and nothing is invented. It is a promise of complete recall over what the system was told, never of coverage of the world.
-_Avoid_: the trust clause · verification · accuracy · *precision and recall* - that framing is voided in place
+The system's promise about its own claims, on three axes: every claim traces to a fact the system holds, no relevant held fact is omitted, and nothing is invented. Each holder answers for what it holds, so a negative answer names the boundary it speaks for; the promise is never one of coverage of the world.
+_Avoid_: the trust clause · verification · accuracy · *precision and recall* - that framing is voided in place · *a promise of complete recall* - recall is one axis, not the term · a bare "it is not known"
 
 **reload**:
 The full reconstruction of a course's context a person performs in order to *interpret* one notice rather than merely read it. Five concurrent courses is five reloads, and collapsing them is what the system exists to do.
