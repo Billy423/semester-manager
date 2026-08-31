@@ -4,7 +4,14 @@
 
 ### Issue tracker
 
-Issues and specs live as GitHub issues, driven through the `gh` CLI. See `docs/agents/issue-tracker.md`.
+Issues and specs live as GitHub issues, driven through the `gh` CLI. `docs/agents/issue-tracker.md` is the contract: it carries the exact invocations, and the wayfinding operations (map, child, blocking, frontier, claim, resolve). Read it rather than guessing.
+
+What is in the tracker, by label:
+
+- **`wayfinder:grilling`** — decisions that are Billy's. Rule one by commenting the ruling and closing the issue; the comment is the record and its timestamp is the date.
+- **`deferred`** — decisions deliberately not made, each carrying the precondition that wakes it. **These are not tasks.** Nobody picks one up; you check whether its wake condition has been met. Eleven gates fire most of them, and a gate fires several at once.
+
+**Updates go in comments, not in body edits.** The body is the current statement; the comments are its history.
 
 ### Triage labels
 

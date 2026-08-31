@@ -36,3 +36,17 @@ State it wherever such a number is load-bearing. It is a weaker property than au
 - Demoting to the level the evidence supports: `fall26:records/spec/schema.md` changelog, 2026-08-25
 - BLOCKED beats guessing, and judging the model: `openclaw:fall26/2026-08-22-derivation/BRIEF.md` rules 5-6 · `openclaw:fall26/2026-08-22-step-minus-1/p5-induction/TASK.md` §Reduction targets
 - The standing caveat on fall26 numbers: `fall26:evidence/README.md`
+
+## Declare your axis of decomposition before you read anything
+
+Say how you are cutting the work, in your own words, before you open the first document. **An axis you have not named is one you cannot be corrected on, and whatever you read next becomes your axis by default.**
+
+This is not a formality. Work on the predecessor effort was once decomposed into `get / nodes / links` — the vocabulary of a graph — because the agent had no declared axis and inherited one from a document written before the architecture was re-cut. The document was superseded; its vocabulary was not.
+
+Inherit an axis deliberately or replace it deliberately. The failure is inheriting it by not noticing.
+
+## Read the test before you doubt the code
+
+When a test fails, read the test first. On the predecessor effort **four tests failed on a lead's wrong expectation, not on the code**. A test encodes what someone believed at the moment they wrote it, which is not always the criterion the code is answerable to.
+
+Fix the expectation where the expectation is wrong. Say which one you changed and why.
