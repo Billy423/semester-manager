@@ -176,6 +176,14 @@ _Avoid_: source · owner · treating the skeleton and the store as holders in th
 The operation that follows a node's edges and reads its neighbours' definitions. Deterministic, and it touches neither the store nor embeddings.
 _Avoid_: search · find_material · retrieval · treating the walk and a by-query store read as one operation
 
+**the block**:
+A node's own render under `look_at` - all of its own fields, its annotations carrying their content, and its neighbours as lines. Derived from the kind's field table rather than designed (`0082`), so it is a family of shapes, one per kind.
+_Avoid_: record - that is the stored thing, not its render · view · *the full node* · treating the block as one shape rather than one per kind
+
+**the line**:
+A neighbour's render - one self-closing `<ref>` carrying only what decides whether that neighbour is worth one `look_at`. Per kind: obligation's is ring 0's band, course's is `id` `name` `term`, and a kind without one owes one. A `Ref`-typed **field** is not a line; it is a bare pointer.
+_Avoid_: *summary* - that is a written object and only `artifact` has one · preview · row · reading *line* as a physical line of output
+
 **dispatch**:
 Sending a question out of the coordinator's context - to a subagent, a task session, or the owner himself - and receiving back a value in the same shape as every peer's. The context that produced the value stays outside.
 _Avoid_: delegate · spawn · *ask* - asking the owner is one case of dispatch, not a different mechanism
