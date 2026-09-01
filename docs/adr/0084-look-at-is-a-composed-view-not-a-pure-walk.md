@@ -1,0 +1,13 @@
+# `look_at` is a composed view whose content each kind decides, not a pure edge walk
+
+`fall26:records/domain/model.md` §7.1 calls the coordinator's material verb **"a WALK, not a search"**. That phrasing was aimed at the real target - nearest-neighbour retrieval over the store - and it over-constrains the verb: `fall26:records/spec/architecture.md` §7 already homes `look_at` in **presentation** and calls it *"a **composed** view, shaped by how much an agent should see at once."* **Composed is the operative word: a kind's render may draw on the tier below it by any means that tier offers, and only corpus search is barred.**
+
+The forcing case is `course`. A course is a node (`0008`), so `look_at` applies to it, but **`obligation.course` is a field and not an edge** (`0029`), so a course has no edge to its obligations and a pure walk from a course reaches none of them. Two alternatives were rejected: making course membership a link breaks `0029`'s surviving ground, since a link cannot express *single-valued and mandatory* and an obligation would become able to carry zero or two courses; and returning nothing leaves a walkable node that shows four fields and its notes.
+
+**So `look_at(course)` composes `obligations.list(course)`** - a service read over an indexed field, which is not the corpus search `0046` bars. `0046`'s prohibition is unchanged: the coordinator still never reaches material by similarity.
+
+**What this makes the answer to *what does one node read return*.** Not one shape. A **family** of shapes, one per kind, each derived by `0082` from that kind's field table, with the kind deciding what its render composes.
+
+**`0029` is left standing with a falsified second ground, recorded not repaired.** It gives two reasons course membership is a field: the target is monomorphic, and *"nobody walks it"*. The first holds. The second was a prediction about usage, and this ruling is the case that tests it - a course is now walked, and reaches its obligations by composition rather than by an edge. The relation would also pass `0012`'s admission test today, at 14 real instances in one course with `obligations.list(course)` as the nameable query. It is not made a link, and the ground it was excluded on is no longer the whole truth.
+
+Source: ruled at #60 (Billy, 2026-09-01), superseding `fall26:records/domain/model.md` §7.1's *walk, not a search* as the verb's definition. `0046`'s no-search rule and `0029`'s cardinality ground are unaffected.

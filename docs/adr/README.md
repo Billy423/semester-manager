@@ -61,11 +61,11 @@ What a field is, when one exists, how a thing is named, and what was removed and
 | [`0032`](0032-a-conditional-weight-gets-a-marker-not-a-model.md) | A conditional grade weight gets a marker, not a model, and the pointer to the rule is optional |
 | [`0033`](0033-parts-carries-recurring-concepts-not-size.md) | `parts` carries the concepts that recur, as canonical singular names, and does not carry size |
 | [`0034`](0034-an-annotation-is-a-tag-not-a-type-hierarchy.md) | An annotation is a tag over two kinds, not a type hierarchy |
-| [`0035`](0035-progress-state-is-non-nullable.md) | `progress.state` is non-nullable and defaults to `not_started`, so the agent has no reason to ask |
+| [`0035`](0035-progress-state-is-non-nullable.md) | `progress.state` is non-nullable and defaults to `not_started`, so the agent has no reason to ask, and it lives on `progress` rather than on `obligation` |
 | [`0036`](0036-a-note-points-at-a-node-and-its-category-is-open.md) | A note is an entity that points at a node; `category` is an open string set on purpose, and provenance confers no immutability |
 | [`0037`](0037-the-graveyard.md) | The graveyard: removed fields, their reasons, and a standing rule against re-adding them |
 
-## The observation contract — `0038`–`0046`
+## The observation contract — `0038`–`0046` · `0082`–`0085`
 
 What the coordinator holds while it decides, what it walks, and what it discards.
 
@@ -80,6 +80,10 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0044`](0044-the-coordinator-holds-ring-0-not-the-skeleton.md) | The coordinator holds ring 0 in its context and queries the skeleton on demand |
 | [`0045`](0045-store-output-enters-only-as-a-conclusion.md) | Store output enters the coordinator only as a conclusion; the context that produced it is discarded, and who produced it is irrelevant |
 | [`0046`](0046-the-coordinator-walks-edges-it-does-not-search.md) | The coordinator reaches material by walking a node's edges, never by searching the corpus, and annotations arrive through their own channel |
+| [`0082`](0082-a-render-is-derived-from-the-kind-s-field-table.md) | A node's render is derived from its kind's field table by four rules, not designed per kind |
+| [`0083`](0083-one-render-serves-both-readers.md) | The render is XML, and one render serves both readers, replacing the human-branch / machine-branch split |
+| [`0084`](0084-look-at-is-a-composed-view-not-a-pure-walk.md) | `look_at` is a composed view whose content each kind decides, not a pure edge walk |
+| [`0085`](0085-the-question-parameter-is-instrumentation.md) | The `question` parameter is development instrumentation and is not in the production signature |
 
 ## Inbound — `0047`–`0058`
 
