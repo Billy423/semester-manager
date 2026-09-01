@@ -181,7 +181,7 @@ A node's own render under `look_at` - all of its own fields, its annotations car
 _Avoid_: record - that is the stored thing, not its render · view · *the full node* · treating the block as one shape rather than one per kind
 
 **the line**:
-A neighbour's render - one self-closing `<ref>` carrying only what decides whether that neighbour is worth one `look_at`. Per kind: obligation's is ring 0's band, course's is `id` `name` `term`, and a kind without one owes one. A `Ref`-typed **field** is not a line; it is a bare pointer.
+A neighbour's render - one self-closing `<ref>` carrying only what decides whether that neighbour is worth one `look_at`. Per kind: obligation's is ring 0's band, course's is `id` `name` `term`. `sticky_note` and `progress` need none - they arrive through their own channel rather than as neighbours - and the debt for `artifact` and `concept` travels with their layers, deferred at #20, #19 and #17, rather than standing as an item of its own. A `Ref`-typed **field** is not a line; it is a bare pointer.
 _Avoid_: *summary* - that is a written object and only `artifact` has one · preview · row · reading *line* as a physical line of output
 
 **dispatch**:
