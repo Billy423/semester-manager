@@ -39,8 +39,8 @@ A pointer to a node: its kind plus its id, drawn from the one id space. It may n
 _Avoid_: *foreign key* (it is explicitly not one) · *pointer* as the noun
 
 **handle**:
-What a render carries so the level below stays reachable. The `id` is what the store holds; the handle is what a surface prints or resolves.
-_Avoid_: using *handle* and *id* interchangeably · a handle that appears in one render branch and not another
+What a render carries so the level below stays reachable. **At the surface it is the `id` itself** (#62): an id is unique across the one id space and nothing constructs one, so nothing is minted or shortened for a render to print. Opacity is not what makes this work - `0026` keeps the space deliberately non-uniform, and `course.id` is the supplied code. *Handle* names the role that value plays in a render, never a second value.
+_Avoid_: treating a handle as a value distinct from the `id` · a handle that appears in one render branch and not another
 
 **locator**:
 The fragment a link points into - a section, a page, a method, a question - held verbatim as the source string.
@@ -181,7 +181,8 @@ A node's own render under `look_at` - all of its own fields, its annotations car
 _Avoid_: record - that is the stored thing, not its render · view · *the full node* · treating the block as one shape rather than one per kind
 
 **the line**:
-A neighbour's render - one self-closing `<ref>` carrying only what decides whether that neighbour is worth one `look_at`. Per kind: obligation's is ring 0's band, course's is `id` `name` `term`. `sticky_note` and `progress` need none - they arrive through their own channel rather than as neighbours - and the debt for `artifact` and `concept` travels with their layers, deferred at #20, #19 and #17, rather than standing as an item of its own. A `Ref`-typed **field** is not a line; it is a bare pointer.
+A neighbour's render - one self-closing `<glance>` element carrying only what decides whether that neighbour is worth one `look_at`. Per kind: obligation's is ring 0's band, course's is `id` `name` `term`. `sticky_note` and `progress` need none - they arrive through their own channel rather than as neighbours - and the debt for `artifact` and `concept` travels with their layers, deferred at #20, #19 and #17, rather than standing as an item of its own. A `Ref`-typed **field** is not a line; it is a bare pointer. The element was named `<ref>` until #62 renamed it, because one word was doing both jobs.
+_Note_: how a **collection** of these renders - sections, their depth, ordering within one - is not decided anywhere; `0082`'s four rules derive from one kind's field table and do not reach it.
 _Avoid_: *summary* - that is a written object and only `artifact` has one · preview · row · reading *line* as a physical line of output
 
 **dispatch**:
@@ -195,8 +196,8 @@ The pass that reads delivered material and produces candidate facts. It changes 
 _Avoid_: ingestion · parsing · using it for what happens to the candidates afterwards
 
 **candidate fact**:
-A fact extracted from source material but not yet landed, carrying none of the system timestamps that landing assigns.
-_Avoid_: extraction output · pre-landing record · staged fact
+A fact extracted from source material but not yet landed. It is **source-shaped and not skeleton-shaped** (`0086`): it carries no handle, it is never a skeleton operation, and it carries none of the system timestamps that landing assigns.
+_Avoid_: extraction output · pre-landing record · staged fact · *proposal* - that word is skeleton-shaped and smuggles a skeleton read into the extractor
 
 **landing**:
 The write of candidate facts into the skeleton. It is idempotent, it detects conflicts instead of overwriting, and it changes with the schema.
