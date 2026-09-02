@@ -65,7 +65,7 @@ What a field is, when one exists, how a thing is named, and what was removed and
 | [`0036`](0036-a-note-points-at-a-node-and-its-category-is-open.md) | A note is an entity that points at a node; `category` is an open string set on purpose, and provenance confers no immutability |
 | [`0037`](0037-the-graveyard.md) | The graveyard: removed fields, their reasons, and a standing rule against re-adding them |
 
-## The observation contract — `0038`–`0046` · `0082`–`0085`
+## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092`
 
 What the coordinator holds while it decides, what it walks, and what it discards.
 
@@ -84,8 +84,10 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0083`](0083-one-render-serves-both-readers.md) | The render is XML, and one render serves both readers, replacing the human-branch / machine-branch split |
 | [`0084`](0084-look-at-is-a-composed-view-not-a-pure-walk.md) | `look_at` is a composed view whose content each kind decides, not a pure edge walk |
 | [`0085`](0085-the-question-parameter-is-instrumentation.md) | The `question` parameter is development instrumentation and is not in the production signature |
+| [`0089`](0089-the-read-side-is-two-verbs-and-refresh-returns-whole-lines.md) | The read side is two verbs, and the refresh returns whole lines rather than a delta |
+| [`0092`](0092-has-more-carries-link-kinds-not-a-boolean.md) | `has-more` carries the link kinds present on the node, not a boolean and not a count |
 
-## Inbound — `0047`–`0058` · `0086`–`0087`
+## Inbound — `0047`–`0058` · `0086`–`0087` · `0090`
 
 How material and corrections arrive, what the system does with a conflict, and what it never fetches.
 
@@ -105,8 +107,9 @@ How material and corrections arrive, what the system does with a conflict, and w
 | [`0058`](0058-generated-text-is-never-attributed-to-the-source.md) | Never present a generated description as something the source said |
 | [`0086`](0086-extraction-emits-candidate-facts-never-skeleton-operations.md) | Extraction emits candidate facts and never skeleton operations, so neither extractor knows the skeleton |
 | [`0087`](0087-two-writes-carry-no-material.md) | Two writes carry no material, and they belong to the coordinator |
+| [`0090`](0090-land-is-the-entry-point-for-a-blind-write.md) | `land()` is the entry point for a write whose author has not read the target |
 
-## The container — `0059`–`0067`
+## The container — `0059`–`0067` · `0088` · `0091` · `0093`
 
 Tiers, the surface's grammar, serialization, and what lives outside the system.
 
@@ -121,6 +124,9 @@ Tiers, the surface's grammar, serialization, and what lives outside the system.
 | [`0065`](0065-the-store-is-the-channel.md) | Components share state through the store, never through a protocol |
 | [`0066`](0066-the-calendar-is-an-outside-projection.md) | The calendar is a projection to an outside surface, not something this system renders |
 | [`0067`](0067-markdown-is-not-the-store.md) | Markdown notes are not the store |
+| [`0088`](0088-the-operation-set-is-defined-once-not-per-kind.md) | The agent-facing operation set is defined once, not once per kind |
+| [`0091`](0091-the-primitive-reports-the-surface-adjudicates.md) | The primitive reports what it replaced; the surface adjudicates |
+| [`0093`](0093-five-criteria-for-a-surface-name.md) | Five criteria for a name at the agent-facing surface, and the names they produced |
 
 ## Method and evidence — `0068`–`0080`
 

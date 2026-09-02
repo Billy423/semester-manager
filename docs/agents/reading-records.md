@@ -23,8 +23,30 @@ The corpus's changelogs do not cover its whole period, and the gap is not marked
 
 So: for anything dated before 2026-08-25, read the section and its banners. An absent changelog entry is not evidence that nothing was decided.
 
+## A record is authority for the aspect it speaks about, and not for a neighbouring one
+
+The most common way to misread a record here is not to misquote it. It is to take a rule about **how a mechanism behaves** and apply it to **what that mechanism is, or how far it reaches.** The quotation stays accurate and the conclusion is wrong, so the usual check does not catch it.
+
+Four instances in a single session on #62, all corrected by Billy or by a fact-check:
+
+| the record says | it was read as | it actually binds |
+|---|---|---|
+| `0051` - landing detects a conflict instead of overwriting | which **entry point** must exist | the **discipline** any write route must honour |
+| `0071` - a success-path derivation cannot produce a repair method | a **conclusion** that repair is out of scope | a **warning** about a blind spot in a derivation |
+| `0046` - annotations arrive through their own channel, never as ordinary neighbours | a **scope** rule, excluding `about` from a routing field | a **delivery** rule about how they reach the reader |
+| `0082` - obligation's line is ring 0's band | a **render** identity, so ring 0 renders as lines | a **field-set** transfer |
+
+So: before using a record to settle a question, **say which aspect the record is speaking about, and check it is the aspect you are deciding.** A record that constrains behaviour does not thereby constrain identity, membership or scope.
+
+## Cite the record that states the claim, not the nearest plausible one
+
+The same session attached four claims to issues that do not make them - a matching question to the single-writer issue, a candidate-fact routing question to the issue that explicitly disclaims it, and two more. Every quotation in that document verified; the **attributions** did not. A quotation check will not find this, so check the attribution separately, and check it hardest in the sections you wrote fastest.
+
+The same discipline covers numbers taken from a subagent or a prior pass: re-derive one before it becomes load-bearing. In that session a reported error factor was a different statistic misread, and it was carried through unexamined.
+
 ## Provenance
 
 - Stating a list's question before treating it as exhaustive: `fall26:evidence/2026-08-29-course-level/NOTES.md` §3
 - Vocabulary travelling with content: `fall26:evidence/2026-08-27-tier-recut/NOTES.md` · `fall26:evidence/2026-08-28-ring-0/NOTES.md`
+- A record's aspect, and citing the record that states the claim: the #62 session, 2026-09-02 - the four misreadings and the four misattributions are named in the table above and in `0091`, `0092` and `0093`
 - The changelog gap: `fall26:records/domain/model.md` and `fall26:records/domain/domain-design.md` changelogs, against `fall26:records/spec/*` changelogs; the corpus names this hazard against itself in `fall26:records/spec/architecture.md` §4, `fall26:records/spec/schema.md` (2026-08-28) and `fall26:records/spec/write-rules.md` (2026-08-28)
