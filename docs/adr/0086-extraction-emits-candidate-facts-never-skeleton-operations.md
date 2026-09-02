@@ -1,0 +1,13 @@
+# Extraction emits candidate facts and never skeleton operations, so neither extractor knows the skeleton
+
+`0049` splits intake in two, and the split is **one item at a time against bulk, not image against text**: its own wording is *"a pasted screenshot read by the session itself"* against *"page-images that cannot enter a session context at any price"*, and a screenshot is an image. So there are **two extractors** - the session the material arrived in, which for daily increments is the coordinator; and an offline pass *"in no tier"*, proposed here as a script driving an LLM API call, because page-images may not be held by any session and a script is the only candidate needing none.
+
+**Neither extractor knows the skeleton, and this is derived rather than chosen.** `0047`'s ground for three seams is that extraction changes with the **material** and landing changes with the **schema**. An extractor emitting skeleton operations - *create an obligation whose `course` is this handle* - would change with the schema, and that ground collapses. A second cost: an extractor answering from skeleton state it kept would be a **second holder**. `CONTEXT.md` records that *"today the **coordinator** alone"* can answer from state it keeps, which is a description of the present and not a prohibition - #66 parks *when a second holder exists, does faithfulness span it* with a wake rather than closing it as impossible. What a second one costs is that issue's, not this record's.
+
+**What both emit is a `candidate fact`**, source-shaped and not skeleton-shaped. `0047` is *"the ruling that makes candidate fact a coherent term"*, and naming the output a *proposal* is the error this record exists to prevent: a proposal is skeleton-shaped, and its shape smuggles a skeleton read into the extractor. The node id a materialization runs against is not an exception - it is an input, because `chunk.node_id` is the one coupling field (`0019`) and a chunk is held against the node it belongs to.
+
+**Nobody applies the criterion at the clear ends.** `0048` rules that the system does not fetch and that the owner is the fetcher, so the delivery act carries the routing: one thing gets pasted, a semester's worth gets dropped as files, and no component decides a path. Where the line between one and bulk falls is open at #73.
+
+**Cost, stated inside:** `obligation` has no key the material supplies (`0026`), so landing cannot dedup it and matching is a surface interaction (`0059` consequence 4). A missed match is silent at the application tier, and that residue is #72.
+
+Source: ruled at #59 (Billy, 2026-09-02). `0049`'s split and `0047`'s seam are unchanged; this records what they jointly forbid the extractor to know.

@@ -2,6 +2,8 @@
 
 The invariant is a data-flow rule, not an agent topology: store output enters the coordinator only as a conclusion, the context that produced it is then discarded, and who produced it is irrelevant - a spawned subagent, a session Billy opens himself and a task session are all implementations. **The coordinator sees what a node IS; it never sees what a node SAYS.** Rendering a node's own summary is a skeleton read and is allowed.
 
-*"No corpus retrieval, no file reads, no fact writes"* is a purity restriction **on materials**, not an enumeration of the coordinator's reads: `look_at(course)` is a call the coordinator makes, or plan generation is blind.
+**What this record governs is what enters the coordinator's context, never what the coordinator may do.** *"No corpus retrieval, no file reads, no fact writes"* is quoted from the responsibility table this record supersedes, and it does not survive as an enumeration of the coordinator's permissions: `look_at(course)` is a call the coordinator makes, or plan generation is blind, and **the write clause does not reach the write direction at all**, because a write puts nothing into the context. So this record does not bar the coordinator from operating on the skeleton; whether a given write is confirmed before it is made is a separate question, open at #10. `0020`'s return-type cut is unaffected: it governs the read direction, which is the direction this record is about.
 
-Source: fall26:records/domain/model.md §7 (Billy, 2026-08-22); the superseded responsibility table at fall26:records/domain/domain-design.md §9.3; re-cut onto tiers at fall26:records/spec/architecture.md §1 and §7
+The same reading applies to every other record about the coordinator's context, `0044` included. Using one to say what the coordinator may **do** is the error corrected here.
+
+Source: ruled at #59 (Billy, 2026-09-01) for the context/permission distinction; fall26:records/domain/model.md §7 (Billy, 2026-08-22); the superseded responsibility table at fall26:records/domain/domain-design.md §9.3; re-cut onto tiers at fall26:records/spec/architecture.md §1 and §7

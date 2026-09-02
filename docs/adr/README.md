@@ -85,7 +85,7 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0084`](0084-look-at-is-a-composed-view-not-a-pure-walk.md) | `look_at` is a composed view whose content each kind decides, not a pure edge walk |
 | [`0085`](0085-the-question-parameter-is-instrumentation.md) | The `question` parameter is development instrumentation and is not in the production signature |
 
-## Inbound — `0047`–`0058`
+## Inbound — `0047`–`0058` · `0086`–`0087`
 
 How material and corrections arrive, what the system does with a conflict, and what it never fetches.
 
@@ -103,6 +103,8 @@ How material and corrections arrive, what the system does with a conflict, and w
 | [`0056`](0056-an-asked-answer-is-kept-and-loud.md) | An asked answer is kept, and its provenance is loud |
 | [`0057`](0057-origin-carries-no-locator.md) | Whatever `origin`'s vocabulary becomes, it may not carry a locator |
 | [`0058`](0058-generated-text-is-never-attributed-to-the-source.md) | Never present a generated description as something the source said |
+| [`0086`](0086-extraction-emits-candidate-facts-never-skeleton-operations.md) | Extraction emits candidate facts and never skeleton operations, so neither extractor knows the skeleton |
+| [`0087`](0087-two-writes-carry-no-material.md) | Two writes carry no material, and they belong to the coordinator |
 
 ## The container — `0059`–`0067`
 
