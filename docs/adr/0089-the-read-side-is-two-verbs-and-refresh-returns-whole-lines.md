@@ -4,7 +4,7 @@
 
 **The second verb exists because ring 0 has no node to address.** Ring 0 is a projection over obligations, not a node, so no `look_at` returns it and there is no id to pass. `0044` already states the behaviour without saying who triggers it - *"the view refreshes as facts change but never deepens"* - and this record supplies the trigger.
 
-**What `refresh()` returns is a whole `<glance>` line per changed obligation, plus an explicit marker for a row that is gone.** Not a field-level delta.
+**What `refresh()` returns is a whole **line** per changed obligation, plus an explicit marker for a row that is gone.** Not a field-level delta. The element was written `<glance>` here; #80 retired that name for a node's render (`0096`), and **what element a ring 0 line uses is open**, because ring 0's own render is not decided - see `0094`'s closing section.
 
 **The ground is that a delta is not self-sufficient and fails silently.** A field-level delta means nothing without the baseline it is a delta against, and that baseline would have to be held by the conversation. `0043` states the hazard in place: *"in a long-running agent conversation the discard is **not** automatic - compaction is lossy and unpredictable, not a discipline"*. A conversation whose scale is days to weeks (`0044`) is compacted repeatedly, and a delta whose baseline has been compacted away is not an error, it is unreadable without saying so. A whole line is readable on its own, so losing the baseline costs *what did not change* rather than everything.
 
