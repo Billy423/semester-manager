@@ -17,8 +17,15 @@ WHAT IS RULED HERE, and by what:
 
   PLACEMENT - 0082's four rules, unchanged.
 
-  SECTIONS - cut by source: 0045 (IS, not SAYS), 0046 (own channel), 0084 (a
-    composed batch is reached by no edge, so it is a fourth source).
+  SECTIONS - cut by source, and 0046 alone makes both cuts: sticky_note and
+    progress "must be delivered through their own channel, never as ordinary
+    neighbours" separates them from the node's own fields AND from neighbours.
+    0084 adds the third: a composed batch is reached by NO edge, so it is a
+    fourth source. 0045 is NOT cited - it is a data-flow rule about what enters
+    the coordinator's context ("the coordinator sees what a node IS; it never
+    sees what a node SAYS", a node, not someone about it), and it says in its
+    own text that using it for what the coordinator may DO is the error it
+    corrects. Citing it here was that error one aspect over.
 
   NAMING - the element name IS the kind (0082's first clause), so a neighbour is
     <obligation .../> and the attribute `kind` never appears. <links> becomes
@@ -34,11 +41,11 @@ import corpus
 
 RENDERED = {
     "course": ["name", "term"],
-    "obligation": ["course", "name", "due", "done-by", "grade-share", "parts", "optional"],
-    "sticky_note": ["category", "origin", "created-at", "updated-at", "body"],
-    "progress": ["state", "origin", "created-at", "updated-at", "detail"],
+    "obligation": ["course", "name", "due", "done_by", "grade_share", "parts", "optional"],
+    "sticky_note": ["category", "origin", "created_at", "updated_at", "body"],
+    "progress": ["state", "origin", "created_at", "updated_at", "detail"],
 }
-FORM = {"course": "ref", "parts": "repeat", "grade-share": "qualified",
+FORM = {"course": "ref", "parts": "repeat", "grade_share": "qualified",
         "body": "freetext", "detail": "freetext"}
 LINE = {"obligation": ["course", "name", "due", "state"], "course": ["name", "term"]}
 COMPOSES = {"course": ["obligations"]}
@@ -69,21 +76,19 @@ class Store:
                               "not_started")
         # MADE UP, same licence as the progress records: the fixture carries no
         # timestamps, and without them the field whose whole purpose is read-time
-        # dating cannot be seen. updated-at differs from created-at on one note.
+        # dating cannot be seen. updated_at differs from created_at on one note.
         for i, n in enumerate(self.notes):
-            n["created-at"] = f"2026-01-{12 + (i % 17):02d}T09:{10 + i:02d}"
-            n["updated-at"] = n["created-at"]
-        self.notes[3]["updated-at"] = "2026-02-02T16:40"
+            n["created_at"] = f"2026-01-{12 + (i % 17):02d}T09:{10 + i:02d}"
+            n["updated_at"] = n["created_at"]
+        self.notes[3]["updated_at"] = "2026-02-02T16:40"
         for i, p in enumerate(self.prog):
-            p["created-at"] = f"2026-01-{14 + (i % 15):02d}T20:{5 + i:02d}"
-            p["updated-at"] = f"2026-02-{1 + (i % 8):02d}T21:{5 + i:02d}"
+            p["created_at"] = f"2026-01-{14 + (i % 15):02d}T20:{5 + i:02d}"
+            p["updated_at"] = f"2026-02-{1 + (i % 8):02d}T21:{5 + i:02d}"
         for ann in self.notes + self.prog:
             ann["kind"] = "sticky_note" if "body" in ann else "progress"
             self.links.append({"id": "e" + ann["id"], "role": "about",
                                "from": ann["id"], "to": ann["about"]})
         for o in self.obs:
-            o["done-by"], o["grade-share"] = o["done_by"], o["grade_share"]
-            o["grade-share_conditional"] = o["grade_share_conditional"]
             o["kind"] = "obligation"
         for c in self.courses:
             c["kind"] = "course"
@@ -93,7 +98,7 @@ class Store:
         if not rows:
             return [f"{ind}<annotations/>"]
         out = [f"{ind}<annotations>"]
-        for a in sorted(rows, key=lambda a: a["created-at"]):
+        for a in sorted(rows, key=lambda a: a["created_at"]):
             out += block(a["kind"], a, self, ind + "  ", sections=False)
         return out + [f"{ind}</annotations>"]
 

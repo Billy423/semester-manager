@@ -17,8 +17,15 @@ WHAT IS RULED HERE, and by what:
 
   PLACEMENT - 0082's four rules, unchanged.
 
-  SECTIONS - cut by source: 0045 (IS, not SAYS), 0046 (own channel), 0084 (a
-    composed batch is reached by no edge, so it is a fourth source).
+  SECTIONS - cut by source, and 0046 alone makes both cuts: sticky_note and
+    progress "must be delivered through their own channel, never as ordinary
+    neighbours" separates them from the node's own fields AND from neighbours.
+    0084 adds the third: a composed batch is reached by NO edge, so it is a
+    fourth source. 0045 is NOT cited - it is a data-flow rule about what enters
+    the coordinator's context ("the coordinator sees what a node IS; it never
+    sees what a node SAYS", a node, not someone about it), and it says in its
+    own text that using it for what the coordinator may DO is the error it
+    corrects. Citing it here was that error one aspect over.
 
   NAMING - the element name IS the kind (0082's first clause), so a neighbour is
     <obligation .../> and the attribute `kind` never appears. <links> becomes
@@ -34,24 +41,24 @@ course   2906 chars
 ----------------------------------------------------------------------------------------------------
 <course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
   <annotations>
-    <sticky_note id="55" category="policy" origin="course-outline" created-at="2026-01-12T09:10" updated-at="2026-01-12T09:10">
+    <sticky_note id="55" category="policy" origin="course-outline" created_at="2026-01-12T09:10" updated_at="2026-01-12T09:10">
       Late assignments carry no penalty, but there is a limit of 12 late days
       across all assignments combined and a maximum of 3 late days on any one
       assignment without an MSAF. Exceeding either limit means late assignments
       are no longer accepted.
     </sticky_note>
-    <sticky_note id="56" category="policy" origin="course-outline" created-at="2026-01-13T09:11" updated-at="2026-01-13T09:11">
+    <sticky_note id="56" category="policy" origin="course-outline" created_at="2026-01-13T09:11" updated_at="2026-01-13T09:11">
       Two marking schemes exist and whichever gives the higher grade is used.
       Scheme 1: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 10/10/30.
       Scheme 2: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 0/0/50.
     </sticky_note>
-    <sticky_note id="57" category="policy" origin="course-outline" created-at="2026-01-14T09:12" updated-at="2026-01-14T09:12">
+    <sticky_note id="57" category="policy" origin="course-outline" created_at="2026-01-14T09:12" updated_at="2026-01-14T09:12">
       Tutorial attendance is worth 5% for attending 10 of 12 tutorials. Two
       tutorials may be skipped with no penalty; after that each tutorial is
       worth 0.5% of the final grade. An MSAF'd tutorial counts as present. This
       requirement has no obligation row - see failure F1.
     </sticky_note>
-    <sticky_note id="58" category="correction" origin="announcement" created-at="2026-01-15T09:13" updated-at="2026-02-02T16:40">
+    <sticky_note id="58" category="correction" origin="announcement" created_at="2026-01-15T09:13" updated_at="2026-02-02T16:40">
       Snow day (Jan 26): everybody was given credit for one tutorial they did
       not attend, so only 9 tutorials attended in person are needed for the full
       5%.
@@ -79,9 +86,9 @@ course   2906 chars
 ----------------------------------------------------------------------------------------------------
 obligation   1622 chars
 ----------------------------------------------------------------------------------------------------
-<obligation id="50" name="Midterm 1" due="2026-02-06T10:30" done-by="" optional="false">
+<obligation id="50" name="Midterm 1" due="2026-02-06T10:30" done_by="" optional="false">
   <course id="2c03"/>
-  <grade-share conditional="true">10</grade-share>
+  <grade_share conditional="true">10</grade_share>
   <parts>
     <part>Object-Oriented Programming</part>
     <part>Arrays and Linked Lists</part>
@@ -89,15 +96,15 @@ obligation   1622 chars
     <part>Stacks, Queues, and Lists</part>
   </parts>
   <annotations>
-    <sticky_note id="60" category="logistics" origin="announcement" created-at="2026-01-17T09:15" updated-at="2026-01-17T09:15">
+    <sticky_note id="60" category="logistics" origin="announcement" created_at="2026-01-17T09:15" updated_at="2026-01-17T09:15">
       Midterm 1 runs during regular class time, 10:30 to 11:20, on Friday
       February 6, in LRW B1007 rather than the regular classroom.
     </sticky_note>
-    <sticky_note id="61" category="clarification" origin="announcement" created-at="2026-01-18T09:16" updated-at="2026-01-18T09:16">
+    <sticky_note id="61" category="clarification" origin="announcement" created_at="2026-01-18T09:16" updated_at="2026-01-18T09:16">
       Coverage clarification: the circular array implementation of a Queue IS on
       the test; the Circular Queue data structure is NOT.
     </sticky_note>
-    <progress id="70" state="done" origin="owner" created-at="2026-01-18T20:09" updated-at="2026-02-05T21:09"/>
+    <progress id="70" state="done" origin="owner" created_at="2026-01-18T20:09" updated_at="2026-02-05T21:09"/>
   </annotations>
   <neighbours>
     <edge id="136" type="builds-on" direction="points-at">
@@ -115,7 +122,7 @@ obligation   1622 chars
 ----------------------------------------------------------------------------------------------------
 sticky_note   481 chars
 ----------------------------------------------------------------------------------------------------
-<sticky_note id="60" category="logistics" origin="announcement" created-at="2026-01-17T09:15" updated-at="2026-01-17T09:15">
+<sticky_note id="60" category="logistics" origin="announcement" created_at="2026-01-17T09:15" updated_at="2026-01-17T09:15">
   Midterm 1 runs during regular class time, 10:30 to 11:20, on Friday
   February 6, in LRW B1007 rather than the regular classroom.
   <annotations/>

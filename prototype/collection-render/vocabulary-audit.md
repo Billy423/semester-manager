@@ -41,9 +41,16 @@ Verdicts are `ok` / `RENAME` / `RULE` (nobody has decided whether it renders at 
 | `announcement` `course-outline` `owner` | ok | `CONTEXT.md`'s `origin` entry names these |
 | `given` / `owed` | **not yet shown** | `0012` gives `spec` a `role ∈ {given, owed}`, so **`role` is already an occupied word** and must not be reused for an edge's type. Arrives with the artifact layer |
 
-## One systematic item, not seven
+## Spelling
 
-Every multi-word token in the render carries a **casing convention no record rules**: `done_by`, `grade_share`, `sticky_note`, `added_at`, `not_started` in snake case, `builds-on`, `course-outline` in kebab. Two conventions, mixed, inside one document. A reader can parse either; what they mark is that this is machine output, and `0093` criterion 2's spirit - do not show the internal structure - reaches the *spelling* as well as the word.
+The render carries two casings - `done_by`, `sticky_note`, `not_started` in snake; `builds-on`, `course-outline`, `points-at` in kebab - and **the split is not internal-versus-outward.** It is whether the coordinator can **name the thing back**:
+
+- **written back → the schema's own spelling.** Kind discriminators go into `land()`, field names into `set`, link types into `attach`, enum values into both. A render that respelled them would hand the coordinator a word the surface then refuses.
+- **invented by the render → free.** `<neighbours>`, `<edge>`, `<annotations>`, `points-at` / `pointed-by`. Nobody writes these back.
+
+This is the rule that lets `<edge>` stand while `<sticky_note>` keeps its underscore. *An id-carrying tag takes the schema spelling* cannot do that job: `<edge>` carries an id and the schema calls the record `Link`.
+
+The schema's own split - `not_started` snake, `builds-on` kebab, both written back - is inherited, not created here. Normalising it is the schema-rename effort's, not this ticket's.
 
 ## What this audit is not
 
@@ -59,11 +66,11 @@ It tests the two criteria that can be applied mechanically. `0093`'s criteria 3,
 | `direction="in\|out"` | `points-at` / `pointed-by` | the value says what it means instead of leaving the frame of reference unstated |
 | `ref="2c03"` | `<course id="2c03"/>` | `0093` rejected `<ref>` once for colliding with the `Ref` term; the attribute collided the same way |
 | `role=` for an edge's type | `type=` | `0012` gives `spec` a `role ∈ {given, owed}`, so `role` was already occupied |
-| `done_by` `grade_share` `sticky_note` `created_at` `not_started` | `done-by` `grade-share` `sticky-note` `created-at` `not-started` | **snake case marks an internal name; an outward render carries none** |
+| *(spelling)* | unchanged | **every name the coordinator writes back keeps the schema's spelling.** An earlier pass kebab-cased them all; `<sticky_note>` broke it, and `<edge>` shows why the rescue is *written back* rather than *carries an id* |
 | `has-more` / `related-by` | *absorbed* | the edge carries the relation, so the projection has no place in a node's render. It survives only where neighbours cannot be listed, which is ring 0 |
 
-`created-at` / `updated-at` **render**; `added-at` **does not**. The two are not one decision: `0046` puts an annotation's whole body in the block, and *"without `updated_at` a January answer is indistinguishable from today's"* - the field's entire purpose is the read. `added-at` describes **the row**, and `look_at`'s purpose is to say what the **node** is.
+`created_at` / `updated_at` **render**; `added_at` **does not**. The two are not one decision: `0046` puts an annotation's whole body in the block, and *"without `updated_at` a January answer is indistinguishable from today's"* - the field's entire purpose is the read. `added_at` describes **the row**, and `look_at`'s purpose is to say what the **node** is.
 
 ## The fourth hole
 
-`0082`'s four rules are a **placement** rule, not a **selection** rule. They say where a field lands, never which fields enter, and #60 waved selection through with *"every other field"*. Excluding `added-at` is the first cut against that, and it had to be argued rather than derived - which is the same shape as the three holes #60 left: the line is not derivable, a collection was never reached, and a composed batch had no position.
+`0082`'s four rules are a **placement** rule, not a **selection** rule. They say where a field lands, never which fields enter, and #60 waved selection through with *"every other field"*. Excluding `added_at` is the first cut against that, and it had to be argued rather than derived - which is the same shape as the three holes #60 left: the line is not derivable, a collection was never reached, and a composed batch had no position.
