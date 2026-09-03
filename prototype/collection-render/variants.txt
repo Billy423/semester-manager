@@ -1,0 +1,1587 @@
+================================================================================
+SUPERSEDED BY settled.py. Read this before reading variants.txt.
+================================================================================
+Every variant below was rendered to be looked at and MOST WERE REJECTED BY
+LOOKING. What replaced them is in settled.py / settled-output.txt.
+
+Things every variant here shows that were ruled AGAINST during #80:
+
+  <glance kind="obligation" ...>  - the element name IS the kind (0082), so a
+                                    neighbour is <obligation .../> and the
+                                    attribute `kind` never appears
+  <links> / <link>                - renamed <neighbours> / <edge>; `link` is
+                                    CONTEXT.md's name for the internal record
+  has-more / related-by           - absorbed. The edge carries the relation, so
+                                    the projection has no place in a node render
+  a per-row band inside a read    - the line is ONE field set; a per-row band
+                                    imports 0038's RESIDENCY into a READ
+  course= as an attribute         - obligation.course is a Ref (0082 rule 2)
+  role= for an edge's type        - 0012 gives `spec` a role of given/owed
+  snake case on non-object names  - done_by, grade_share, created_at
+
+It is kept for the same reason fall26:evidence/2026-08-28-ring-0 kept its own
+rejected table: the rejections were reached BY LOOKING AT IT. It is a record of
+what was seen. It is not a design, and nothing should be built from it.
+================================================================================
+
+What is real and what is not, in every file here:
+
+  REAL     2c03: 14 obligations, 11 sticky notes, from
+           fall26:app/tests/fixtures/2c03.json, hand-corrected by Billy 2026-08-28.
+  MADE UP  every `progress` record, four `builds-on` edges, and every timestamp.
+           Ruled admissible by Billy at #80: this ticket looks at the render,
+           not at whether the state is true of the world.
+  DERIVED  2aa4, 2px3, 2fa3, 3mi3 and all their rows. SHAPE ONLY. Per 0077 a
+           derived fixture is code, not evidence: NO COUNT FROM THESE ROWS MAY
+           ENTER #80'S ANSWER.
+
+AS_OF = 2026-02-09, picked because winter-2026 is a past term. The band window
+is NOT a free parameter: 0042 rules it as [today-7d, today+14d].
+================================================================================
+
+
+====================================================================================================
+GROUP A  ring 0, all five courses, 55 obligations
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+A0  incumbent extrapolated: <obligations> container + band="" attribute
+     7502 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <obligations>
+    <glance kind="obligation" id="102" course="2px3" name="Workshop Sign-up" due="2026-01-15" state="not_started" band="B"/>
+    <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="89" course="2px3" name="Reflection 1" due="2026-01-19T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="72" course="2aa4" name="Lab 1" due="2026-01-20T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="111" course="2fa3" name="Problem Set 1" due="2026-01-21T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="124" course="3mi3" name="Assignment 1" due="2026-01-23T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="90" course="2px3" name="Reflection 2" due="2026-01-26T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about" band="A"/>
+    <glance kind="obligation" id="76" course="2aa4" name="Quiz 1" due="2026-01-28T09:30" state="done" band="B"/>
+    <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="95" course="2px3" name="Team Charter" due="2026-01-30T23:59" state="done" band="B"/>
+    <glance kind="obligation" id="91" course="2px3" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="73" course="2aa4" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="112" course="2fa3" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on" band="A"/>
+    <glance kind="obligation" id="127" course="3mi3" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="92" course="2px3" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="77" course="2aa4" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="115" course="2fa3" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="125" course="3mi3" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on" band="A"/>
+    <glance kind="obligation" id="96" course="2px3" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="79" course="2aa4" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="" has-more="about" band="A"/>
+    <glance kind="obligation" id="130" course="3mi3" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="97" course="2px3" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="93" course="2px3" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="" has-more="" band="A"/>
+    <glance kind="obligation" id="74" course="2aa4" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="" has-more="about" band="A"/>
+    <glance kind="obligation" id="113" course="2fa3" name="Problem Set 3" due="2026-02-25T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="94" course="2px3" name="Reflection 6" due="2026-03-02T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="128" course="3mi3" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="98" course="2px3" name="Proposal Final" due="2026-03-06T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="78" course="2aa4" name="Quiz 3" due="2026-03-11T09:30" state="not_started" band="B"/>
+    <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started" band="B"/>
+    <glance kind="obligation" id="126" course="3mi3" name="Assignment 3" due="2026-03-13T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="75" course="2aa4" name="Lab 4" due="2026-03-17T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="114" course="2fa3" name="Problem Set 4" due="2026-03-18T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="116" course="2fa3" name="Term Test 2" due="2026-03-19T18:30" state="not_started" band="B"/>
+    <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="99" course="2px3" name="Oral Presentation" due="2026-03-24T13:30" state="not_started" band="B"/>
+    <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started" band="B"/>
+    <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="81" course="2aa4" name="Peer Feedback Form" due="2026-03-30" state="not_started" band="B"/>
+    <glance kind="obligation" id="119" course="2fa3" name="Course Evaluation" due="2026-04-03" state="not_started" band="B"/>
+    <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="100" course="2px3" name="Portfolio" due="2026-04-08T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="129" course="3mi3" name="Project Report" due="2026-04-10T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="131" course="3mi3" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started" band="B"/>
+    <glance kind="obligation" id="101" course="2px3" name="Attendance" due="" state="not_started" band="B"/>
+    <glance kind="obligation" id="117" course="2fa3" name="Final Exam" due="" state="not_started" band="B"/>
+    <glance kind="obligation" id="118" course="2fa3" name="Tutorial Participation" due="" state="not_started" band="B"/>
+    <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started" band="B"/>
+    <glance kind="obligation" id="80" course="2aa4" name="Final Exam" due="" state="not_started" band="B"/>
+  </obligations>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A1  a named container per band
+     7020 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <band-a>
+    <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+    <glance kind="obligation" id="91" course="2px3" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="73" course="2aa4" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="112" course="2fa3" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+    <glance kind="obligation" id="127" course="3mi3" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="92" course="2px3" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="77" course="2aa4" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="115" course="2fa3" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="125" course="3mi3" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+    <glance kind="obligation" id="96" course="2px3" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="79" course="2aa4" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="" has-more="about"/>
+    <glance kind="obligation" id="130" course="3mi3" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="97" course="2px3" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="93" course="2px3" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="74" course="2aa4" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="" has-more="about"/>
+  </band-a>
+  <band-b>
+    <glance kind="obligation" id="102" course="2px3" name="Workshop Sign-up" due="2026-01-15" state="not_started"/>
+    <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+    <glance kind="obligation" id="89" course="2px3" name="Reflection 1" due="2026-01-19T23:59" state="done"/>
+    <glance kind="obligation" id="72" course="2aa4" name="Lab 1" due="2026-01-20T23:59" state="done"/>
+    <glance kind="obligation" id="111" course="2fa3" name="Problem Set 1" due="2026-01-21T23:59" state="done"/>
+    <glance kind="obligation" id="124" course="3mi3" name="Assignment 1" due="2026-01-23T23:59" state="done"/>
+    <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+    <glance kind="obligation" id="90" course="2px3" name="Reflection 2" due="2026-01-26T23:59" state="done"/>
+    <glance kind="obligation" id="76" course="2aa4" name="Quiz 1" due="2026-01-28T09:30" state="done"/>
+    <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+    <glance kind="obligation" id="95" course="2px3" name="Team Charter" due="2026-01-30T23:59" state="done"/>
+    <glance kind="obligation" id="113" course="2fa3" name="Problem Set 3" due="2026-02-25T23:59" state="not_started"/>
+    <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="94" course="2px3" name="Reflection 6" due="2026-03-02T23:59" state="not_started"/>
+    <glance kind="obligation" id="128" course="3mi3" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="98" course="2px3" name="Proposal Final" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="78" course="2aa4" name="Quiz 3" due="2026-03-11T09:30" state="not_started"/>
+    <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+    <glance kind="obligation" id="126" course="3mi3" name="Assignment 3" due="2026-03-13T23:59" state="not_started"/>
+    <glance kind="obligation" id="75" course="2aa4" name="Lab 4" due="2026-03-17T23:59" state="not_started"/>
+    <glance kind="obligation" id="114" course="2fa3" name="Problem Set 4" due="2026-03-18T23:59" state="not_started"/>
+    <glance kind="obligation" id="116" course="2fa3" name="Term Test 2" due="2026-03-19T18:30" state="not_started"/>
+    <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+    <glance kind="obligation" id="99" course="2px3" name="Oral Presentation" due="2026-03-24T13:30" state="not_started"/>
+    <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+    <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="81" course="2aa4" name="Peer Feedback Form" due="2026-03-30" state="not_started"/>
+    <glance kind="obligation" id="119" course="2fa3" name="Course Evaluation" due="2026-04-03" state="not_started"/>
+    <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="100" course="2px3" name="Portfolio" due="2026-04-08T23:59" state="not_started"/>
+    <glance kind="obligation" id="129" course="3mi3" name="Project Report" due="2026-04-10T23:59" state="not_started"/>
+    <glance kind="obligation" id="131" course="3mi3" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started"/>
+    <glance kind="obligation" id="101" course="2px3" name="Attendance" due="" state="not_started"/>
+    <glance kind="obligation" id="117" course="2fa3" name="Final Exam" due="" state="not_started"/>
+    <glance kind="obligation" id="118" course="2fa3" name="Tutorial Participation" due="" state="not_started"/>
+    <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+    <glance kind="obligation" id="80" course="2aa4" name="Final Exam" due="" state="not_started"/>
+  </band-b>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A2  an attribute on each member, one flat list
+     7359 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <glance kind="obligation" id="102" course="2px3" name="Workshop Sign-up" due="2026-01-15" state="not_started" band="B"/>
+  <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="89" course="2px3" name="Reflection 1" due="2026-01-19T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="72" course="2aa4" name="Lab 1" due="2026-01-20T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="111" course="2fa3" name="Problem Set 1" due="2026-01-21T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="124" course="3mi3" name="Assignment 1" due="2026-01-23T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="90" course="2px3" name="Reflection 2" due="2026-01-26T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about" band="A"/>
+  <glance kind="obligation" id="76" course="2aa4" name="Quiz 1" due="2026-01-28T09:30" state="done" band="B"/>
+  <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="95" course="2px3" name="Team Charter" due="2026-01-30T23:59" state="done" band="B"/>
+  <glance kind="obligation" id="91" course="2px3" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="73" course="2aa4" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="112" course="2fa3" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on" band="A"/>
+  <glance kind="obligation" id="127" course="3mi3" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="92" course="2px3" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="77" course="2aa4" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="115" course="2fa3" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="125" course="3mi3" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on" band="A"/>
+  <glance kind="obligation" id="96" course="2px3" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="79" course="2aa4" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="" has-more="about" band="A"/>
+  <glance kind="obligation" id="130" course="3mi3" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="97" course="2px3" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="93" course="2px3" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="" has-more="" band="A"/>
+  <glance kind="obligation" id="74" course="2aa4" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="" has-more="about" band="A"/>
+  <glance kind="obligation" id="113" course="2fa3" name="Problem Set 3" due="2026-02-25T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="94" course="2px3" name="Reflection 6" due="2026-03-02T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="128" course="3mi3" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="98" course="2px3" name="Proposal Final" due="2026-03-06T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="78" course="2aa4" name="Quiz 3" due="2026-03-11T09:30" state="not_started" band="B"/>
+  <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started" band="B"/>
+  <glance kind="obligation" id="126" course="3mi3" name="Assignment 3" due="2026-03-13T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="75" course="2aa4" name="Lab 4" due="2026-03-17T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="114" course="2fa3" name="Problem Set 4" due="2026-03-18T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="116" course="2fa3" name="Term Test 2" due="2026-03-19T18:30" state="not_started" band="B"/>
+  <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="99" course="2px3" name="Oral Presentation" due="2026-03-24T13:30" state="not_started" band="B"/>
+  <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started" band="B"/>
+  <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="81" course="2aa4" name="Peer Feedback Form" due="2026-03-30" state="not_started" band="B"/>
+  <glance kind="obligation" id="119" course="2fa3" name="Course Evaluation" due="2026-04-03" state="not_started" band="B"/>
+  <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="100" course="2px3" name="Portfolio" due="2026-04-08T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="129" course="3mi3" name="Project Report" due="2026-04-10T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="131" course="3mi3" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started" band="B"/>
+  <glance kind="obligation" id="101" course="2px3" name="Attendance" due="" state="not_started" band="B"/>
+  <glance kind="obligation" id="117" course="2fa3" name="Final Exam" due="" state="not_started" band="B"/>
+  <glance kind="obligation" id="118" course="2fa3" name="Tutorial Participation" due="" state="not_started" band="B"/>
+  <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started" band="B"/>
+  <glance kind="obligation" id="80" course="2aa4" name="Final Exam" due="" state="not_started" band="B"/>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A3  pure ordering, no marker, no container
+     6864 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+  <glance kind="obligation" id="91" course="2px3" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="73" course="2aa4" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="112" course="2fa3" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+  <glance kind="obligation" id="127" course="3mi3" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="92" course="2px3" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="77" course="2aa4" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="115" course="2fa3" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="125" course="3mi3" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+  <glance kind="obligation" id="96" course="2px3" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="79" course="2aa4" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="" has-more="about"/>
+  <glance kind="obligation" id="130" course="3mi3" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="97" course="2px3" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="93" course="2px3" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="74" course="2aa4" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="" has-more="about"/>
+  <glance kind="obligation" id="102" course="2px3" name="Workshop Sign-up" due="2026-01-15" state="not_started"/>
+  <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+  <glance kind="obligation" id="89" course="2px3" name="Reflection 1" due="2026-01-19T23:59" state="done"/>
+  <glance kind="obligation" id="72" course="2aa4" name="Lab 1" due="2026-01-20T23:59" state="done"/>
+  <glance kind="obligation" id="111" course="2fa3" name="Problem Set 1" due="2026-01-21T23:59" state="done"/>
+  <glance kind="obligation" id="124" course="3mi3" name="Assignment 1" due="2026-01-23T23:59" state="done"/>
+  <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+  <glance kind="obligation" id="90" course="2px3" name="Reflection 2" due="2026-01-26T23:59" state="done"/>
+  <glance kind="obligation" id="76" course="2aa4" name="Quiz 1" due="2026-01-28T09:30" state="done"/>
+  <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+  <glance kind="obligation" id="95" course="2px3" name="Team Charter" due="2026-01-30T23:59" state="done"/>
+  <glance kind="obligation" id="113" course="2fa3" name="Problem Set 3" due="2026-02-25T23:59" state="not_started"/>
+  <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="94" course="2px3" name="Reflection 6" due="2026-03-02T23:59" state="not_started"/>
+  <glance kind="obligation" id="128" course="3mi3" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="98" course="2px3" name="Proposal Final" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="78" course="2aa4" name="Quiz 3" due="2026-03-11T09:30" state="not_started"/>
+  <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+  <glance kind="obligation" id="126" course="3mi3" name="Assignment 3" due="2026-03-13T23:59" state="not_started"/>
+  <glance kind="obligation" id="75" course="2aa4" name="Lab 4" due="2026-03-17T23:59" state="not_started"/>
+  <glance kind="obligation" id="114" course="2fa3" name="Problem Set 4" due="2026-03-18T23:59" state="not_started"/>
+  <glance kind="obligation" id="116" course="2fa3" name="Term Test 2" due="2026-03-19T18:30" state="not_started"/>
+  <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+  <glance kind="obligation" id="99" course="2px3" name="Oral Presentation" due="2026-03-24T13:30" state="not_started"/>
+  <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+  <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="81" course="2aa4" name="Peer Feedback Form" due="2026-03-30" state="not_started"/>
+  <glance kind="obligation" id="119" course="2fa3" name="Course Evaluation" due="2026-04-03" state="not_started"/>
+  <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="100" course="2px3" name="Portfolio" due="2026-04-08T23:59" state="not_started"/>
+  <glance kind="obligation" id="129" course="3mi3" name="Project Report" due="2026-04-10T23:59" state="not_started"/>
+  <glance kind="obligation" id="131" course="3mi3" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started"/>
+  <glance kind="obligation" id="101" course="2px3" name="Attendance" due="" state="not_started"/>
+  <glance kind="obligation" id="117" course="2fa3" name="Final Exam" due="" state="not_started"/>
+  <glance kind="obligation" id="118" course="2fa3" name="Tutorial Participation" due="" state="not_started"/>
+  <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+  <glance kind="obligation" id="80" course="2aa4" name="Final Exam" due="" state="not_started"/>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A4  depth IS the band - 0038's two field sets, no marker  [BYTE-IDENTICAL TO A3]
+     6864 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+  <glance kind="obligation" id="91" course="2px3" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="73" course="2aa4" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="112" course="2fa3" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+  <glance kind="obligation" id="127" course="3mi3" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="92" course="2px3" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="77" course="2aa4" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="115" course="2fa3" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="125" course="3mi3" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+  <glance kind="obligation" id="96" course="2px3" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="79" course="2aa4" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="" has-more="about"/>
+  <glance kind="obligation" id="130" course="3mi3" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="97" course="2px3" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="93" course="2px3" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+  <glance kind="obligation" id="74" course="2aa4" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="" has-more="about"/>
+  <glance kind="obligation" id="102" course="2px3" name="Workshop Sign-up" due="2026-01-15" state="not_started"/>
+  <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+  <glance kind="obligation" id="89" course="2px3" name="Reflection 1" due="2026-01-19T23:59" state="done"/>
+  <glance kind="obligation" id="72" course="2aa4" name="Lab 1" due="2026-01-20T23:59" state="done"/>
+  <glance kind="obligation" id="111" course="2fa3" name="Problem Set 1" due="2026-01-21T23:59" state="done"/>
+  <glance kind="obligation" id="124" course="3mi3" name="Assignment 1" due="2026-01-23T23:59" state="done"/>
+  <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+  <glance kind="obligation" id="90" course="2px3" name="Reflection 2" due="2026-01-26T23:59" state="done"/>
+  <glance kind="obligation" id="76" course="2aa4" name="Quiz 1" due="2026-01-28T09:30" state="done"/>
+  <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+  <glance kind="obligation" id="95" course="2px3" name="Team Charter" due="2026-01-30T23:59" state="done"/>
+  <glance kind="obligation" id="113" course="2fa3" name="Problem Set 3" due="2026-02-25T23:59" state="not_started"/>
+  <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="94" course="2px3" name="Reflection 6" due="2026-03-02T23:59" state="not_started"/>
+  <glance kind="obligation" id="128" course="3mi3" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="98" course="2px3" name="Proposal Final" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="78" course="2aa4" name="Quiz 3" due="2026-03-11T09:30" state="not_started"/>
+  <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+  <glance kind="obligation" id="126" course="3mi3" name="Assignment 3" due="2026-03-13T23:59" state="not_started"/>
+  <glance kind="obligation" id="75" course="2aa4" name="Lab 4" due="2026-03-17T23:59" state="not_started"/>
+  <glance kind="obligation" id="114" course="2fa3" name="Problem Set 4" due="2026-03-18T23:59" state="not_started"/>
+  <glance kind="obligation" id="116" course="2fa3" name="Term Test 2" due="2026-03-19T18:30" state="not_started"/>
+  <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+  <glance kind="obligation" id="99" course="2px3" name="Oral Presentation" due="2026-03-24T13:30" state="not_started"/>
+  <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+  <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="81" course="2aa4" name="Peer Feedback Form" due="2026-03-30" state="not_started"/>
+  <glance kind="obligation" id="119" course="2fa3" name="Course Evaluation" due="2026-04-03" state="not_started"/>
+  <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="100" course="2px3" name="Portfolio" due="2026-04-08T23:59" state="not_started"/>
+  <glance kind="obligation" id="129" course="3mi3" name="Project Report" due="2026-04-10T23:59" state="not_started"/>
+  <glance kind="obligation" id="131" course="3mi3" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started"/>
+  <glance kind="obligation" id="101" course="2px3" name="Attendance" due="" state="not_started"/>
+  <glance kind="obligation" id="117" course="2fa3" name="Final Exam" due="" state="not_started"/>
+  <glance kind="obligation" id="118" course="2fa3" name="Tutorial Participation" due="" state="not_started"/>
+  <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+  <glance kind="obligation" id="80" course="2aa4" name="Final Exam" due="" state="not_started"/>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A5  grouped by course - the shape `reload` argues against
+     7306 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <course id="2c03" name="Data Structures and Algorithms">
+    <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+    <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+    <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+    <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+    <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+    <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+    <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+    <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+    <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+    <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+  </course>
+  <course id="2aa4" name="Computer Architecture">
+    <glance kind="obligation" id="72" course="2aa4" name="Lab 1" due="2026-01-20T23:59" state="done"/>
+    <glance kind="obligation" id="76" course="2aa4" name="Quiz 1" due="2026-01-28T09:30" state="done"/>
+    <glance kind="obligation" id="73" course="2aa4" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="77" course="2aa4" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="79" course="2aa4" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="" has-more="about"/>
+    <glance kind="obligation" id="74" course="2aa4" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="" has-more="about"/>
+    <glance kind="obligation" id="78" course="2aa4" name="Quiz 3" due="2026-03-11T09:30" state="not_started"/>
+    <glance kind="obligation" id="75" course="2aa4" name="Lab 4" due="2026-03-17T23:59" state="not_started"/>
+    <glance kind="obligation" id="81" course="2aa4" name="Peer Feedback Form" due="2026-03-30" state="not_started"/>
+    <glance kind="obligation" id="80" course="2aa4" name="Final Exam" due="" state="not_started"/>
+  </course>
+  <course id="2px3" name="Professional Communication for Engineers">
+    <glance kind="obligation" id="102" course="2px3" name="Workshop Sign-up" due="2026-01-15" state="not_started"/>
+    <glance kind="obligation" id="89" course="2px3" name="Reflection 1" due="2026-01-19T23:59" state="done"/>
+    <glance kind="obligation" id="90" course="2px3" name="Reflection 2" due="2026-01-26T23:59" state="done"/>
+    <glance kind="obligation" id="95" course="2px3" name="Team Charter" due="2026-01-30T23:59" state="done"/>
+    <glance kind="obligation" id="91" course="2px3" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="92" course="2px3" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="96" course="2px3" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="97" course="2px3" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="93" course="2px3" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="94" course="2px3" name="Reflection 6" due="2026-03-02T23:59" state="not_started"/>
+    <glance kind="obligation" id="98" course="2px3" name="Proposal Final" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="99" course="2px3" name="Oral Presentation" due="2026-03-24T13:30" state="not_started"/>
+    <glance kind="obligation" id="100" course="2px3" name="Portfolio" due="2026-04-08T23:59" state="not_started"/>
+    <glance kind="obligation" id="101" course="2px3" name="Attendance" due="" state="not_started"/>
+  </course>
+  <course id="2fa3" name="Discrete Mathematics">
+    <glance kind="obligation" id="111" course="2fa3" name="Problem Set 1" due="2026-01-21T23:59" state="done"/>
+    <glance kind="obligation" id="112" course="2fa3" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="115" course="2fa3" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="113" course="2fa3" name="Problem Set 3" due="2026-02-25T23:59" state="not_started"/>
+    <glance kind="obligation" id="114" course="2fa3" name="Problem Set 4" due="2026-03-18T23:59" state="not_started"/>
+    <glance kind="obligation" id="116" course="2fa3" name="Term Test 2" due="2026-03-19T18:30" state="not_started"/>
+    <glance kind="obligation" id="119" course="2fa3" name="Course Evaluation" due="2026-04-03" state="not_started"/>
+    <glance kind="obligation" id="117" course="2fa3" name="Final Exam" due="" state="not_started"/>
+    <glance kind="obligation" id="118" course="2fa3" name="Tutorial Participation" due="" state="not_started"/>
+  </course>
+  <course id="3mi3" name="Machine Learning">
+    <glance kind="obligation" id="124" course="3mi3" name="Assignment 1" due="2026-01-23T23:59" state="done"/>
+    <glance kind="obligation" id="127" course="3mi3" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="125" course="3mi3" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="130" course="3mi3" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="" has-more=""/>
+    <glance kind="obligation" id="128" course="3mi3" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="126" course="3mi3" name="Assignment 3" due="2026-03-13T23:59" state="not_started"/>
+    <glance kind="obligation" id="129" course="3mi3" name="Project Report" due="2026-04-10T23:59" state="not_started"/>
+    <glance kind="obligation" id="131" course="3mi3" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started"/>
+  </course>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A6  A1 + 0082 obeyed inside the member: <course ref> and <has-more> are elements
+     8617 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <band-a>
+    <glance kind="obligation" id="53" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="91" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="73" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="112" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2fa3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="50" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="127" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="">
+      <course ref="3mi3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="92" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="77" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="115" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="">
+      <course ref="2fa3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="125" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="3mi3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="44" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2c03"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="96" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="79" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="130" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="">
+      <course ref="3mi3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="97" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="93" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="74" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more kind="about"/>
+    </glance>
+  </band-a>
+  <band-b>
+    <glance kind="obligation" id="102" name="Workshop Sign-up" due="2026-01-15" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="41" name="Assignment 1" due="2026-01-16T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="89" name="Reflection 1" due="2026-01-19T23:59" state="done">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="72" name="Lab 1" due="2026-01-20T23:59" state="done">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="111" name="Problem Set 1" due="2026-01-21T23:59" state="done">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="124" name="Assignment 1" due="2026-01-23T23:59" state="done">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="90" name="Reflection 2" due="2026-01-26T23:59" state="done">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="76" name="Quiz 1" due="2026-01-28T09:30" state="done">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="95" name="Team Charter" due="2026-01-30T23:59" state="done">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="113" name="Problem Set 3" due="2026-02-25T23:59" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="45" name="Assignment 5" due="2026-02-27T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="94" name="Reflection 6" due="2026-03-02T23:59" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="128" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="46" name="Assignment 6" due="2026-03-06T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="98" name="Proposal Final" due="2026-03-06T23:59" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="78" name="Quiz 3" due="2026-03-11T09:30" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="126" name="Assignment 3" due="2026-03-13T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="75" name="Lab 4" due="2026-03-17T23:59" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="114" name="Problem Set 4" due="2026-03-18T23:59" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="116" name="Term Test 2" due="2026-03-19T18:30" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="47" name="Assignment 7" due="2026-03-20T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="99" name="Oral Presentation" due="2026-03-24T13:30" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="54" name="Bonus Mark Survey" due="2026-03-27" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="48" name="Assignment 8" due="2026-03-27T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="81" name="Peer Feedback Form" due="2026-03-30" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="119" name="Course Evaluation" due="2026-04-03" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="49" name="Assignment 9" due="2026-04-06T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="100" name="Portfolio" due="2026-04-08T23:59" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="129" name="Project Report" due="2026-04-10T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="131" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="101" name="Attendance" due="" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="117" name="Final Exam" due="" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="118" name="Tutorial Participation" due="" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="52" name="Final Exam" due="" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="80" name="Final Exam" due="" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+  </band-b>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A7  A3/A4 + 0082 obeyed inside the member
+     8205 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <glance kind="obligation" id="53" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="">
+    <course ref="2c03"/>
+    <has-more kind="about"/>
+  </glance>
+  <glance kind="obligation" id="91" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="">
+    <course ref="2px3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="73" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="">
+    <course ref="2aa4"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="112" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="">
+    <course ref="2fa3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="50" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="">
+    <course ref="2c03"/>
+    <has-more kind="about"/>
+    <has-more kind="builds-on"/>
+  </glance>
+  <glance kind="obligation" id="127" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="">
+    <course ref="3mi3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="92" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="">
+    <course ref="2px3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="77" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="">
+    <course ref="2aa4"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="115" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="">
+    <course ref="2fa3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="125" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+    <course ref="3mi3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="44" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+    <course ref="2c03"/>
+    <has-more kind="builds-on"/>
+  </glance>
+  <glance kind="obligation" id="96" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+    <course ref="2px3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="79" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="">
+    <course ref="2aa4"/>
+    <has-more kind="about"/>
+  </glance>
+  <glance kind="obligation" id="130" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="">
+    <course ref="3mi3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="97" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="">
+    <course ref="2px3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="93" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="">
+    <course ref="2px3"/>
+    <has-more/>
+  </glance>
+  <glance kind="obligation" id="74" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="">
+    <course ref="2aa4"/>
+    <has-more kind="about"/>
+  </glance>
+  <glance kind="obligation" id="102" name="Workshop Sign-up" due="2026-01-15" state="not_started">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="41" name="Assignment 1" due="2026-01-16T23:59" state="done">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="89" name="Reflection 1" due="2026-01-19T23:59" state="done">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="72" name="Lab 1" due="2026-01-20T23:59" state="done">
+    <course ref="2aa4"/>
+  </glance>
+  <glance kind="obligation" id="111" name="Problem Set 1" due="2026-01-21T23:59" state="done">
+    <course ref="2fa3"/>
+  </glance>
+  <glance kind="obligation" id="124" name="Assignment 1" due="2026-01-23T23:59" state="done">
+    <course ref="3mi3"/>
+  </glance>
+  <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="90" name="Reflection 2" due="2026-01-26T23:59" state="done">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="76" name="Quiz 1" due="2026-01-28T09:30" state="done">
+    <course ref="2aa4"/>
+  </glance>
+  <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="95" name="Team Charter" due="2026-01-30T23:59" state="done">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="113" name="Problem Set 3" due="2026-02-25T23:59" state="not_started">
+    <course ref="2fa3"/>
+  </glance>
+  <glance kind="obligation" id="45" name="Assignment 5" due="2026-02-27T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="94" name="Reflection 6" due="2026-03-02T23:59" state="not_started">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="128" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started">
+    <course ref="3mi3"/>
+  </glance>
+  <glance kind="obligation" id="46" name="Assignment 6" due="2026-03-06T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="98" name="Proposal Final" due="2026-03-06T23:59" state="not_started">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="78" name="Quiz 3" due="2026-03-11T09:30" state="not_started">
+    <course ref="2aa4"/>
+  </glance>
+  <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="126" name="Assignment 3" due="2026-03-13T23:59" state="not_started">
+    <course ref="3mi3"/>
+  </glance>
+  <glance kind="obligation" id="75" name="Lab 4" due="2026-03-17T23:59" state="not_started">
+    <course ref="2aa4"/>
+  </glance>
+  <glance kind="obligation" id="114" name="Problem Set 4" due="2026-03-18T23:59" state="not_started">
+    <course ref="2fa3"/>
+  </glance>
+  <glance kind="obligation" id="116" name="Term Test 2" due="2026-03-19T18:30" state="not_started">
+    <course ref="2fa3"/>
+  </glance>
+  <glance kind="obligation" id="47" name="Assignment 7" due="2026-03-20T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="99" name="Oral Presentation" due="2026-03-24T13:30" state="not_started">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="54" name="Bonus Mark Survey" due="2026-03-27" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="48" name="Assignment 8" due="2026-03-27T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="81" name="Peer Feedback Form" due="2026-03-30" state="not_started">
+    <course ref="2aa4"/>
+  </glance>
+  <glance kind="obligation" id="119" name="Course Evaluation" due="2026-04-03" state="not_started">
+    <course ref="2fa3"/>
+  </glance>
+  <glance kind="obligation" id="49" name="Assignment 9" due="2026-04-06T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="100" name="Portfolio" due="2026-04-08T23:59" state="not_started">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="129" name="Project Report" due="2026-04-10T23:59" state="not_started">
+    <course ref="3mi3"/>
+  </glance>
+  <glance kind="obligation" id="131" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started">
+    <course ref="3mi3"/>
+  </glance>
+  <glance kind="obligation" id="101" name="Attendance" due="" state="not_started">
+    <course ref="2px3"/>
+  </glance>
+  <glance kind="obligation" id="117" name="Final Exam" due="" state="not_started">
+    <course ref="2fa3"/>
+  </glance>
+  <glance kind="obligation" id="118" name="Tutorial Participation" due="" state="not_started">
+    <course ref="2fa3"/>
+  </glance>
+  <glance kind="obligation" id="52" name="Final Exam" due="" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="80" name="Final Exam" due="" state="not_started">
+    <course ref="2aa4"/>
+  </glance>
+</ring-0>
+
+----------------------------------------------------------------------------------------------------
+A8  A6 with has-more as one element carrying <link-kind> children
+     8828 chars
+----------------------------------------------------------------------------------------------------
+<ring-0>
+  <band-a>
+    <glance kind="obligation" id="53" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="">
+      <course ref="2c03"/>
+      <has-more>
+        <link-kind>about</link-kind>
+      </has-more>
+    </glance>
+    <glance kind="obligation" id="91" name="Reflection 3" due="2026-02-02T23:59" state="done" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="73" name="Lab 2" due="2026-02-03T23:59" state="done" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="112" name="Problem Set 2" due="2026-02-04T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2fa3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="50" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="">
+      <course ref="2c03"/>
+      <has-more>
+        <link-kind>about</link-kind>
+        <link-kind>builds-on</link-kind>
+      </has-more>
+    </glance>
+    <glance kind="obligation" id="127" name="Project Proposal" due="2026-02-06T23:59" state="done" optional="false" done_by="">
+      <course ref="3mi3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="92" name="Reflection 4" due="2026-02-09T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="77" name="Quiz 2" due="2026-02-11T09:30" state="in_progress" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="115" name="Term Test 1" due="2026-02-12T18:30" state="in_progress" optional="false" done_by="">
+      <course ref="2fa3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="125" name="Assignment 2" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="3mi3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="44" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2c03"/>
+      <has-more>
+        <link-kind>builds-on</link-kind>
+      </has-more>
+    </glance>
+    <glance kind="obligation" id="96" name="Proposal Draft" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="79" name="Midterm" due="2026-02-18T19:00" state="not_started" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more>
+        <link-kind>about</link-kind>
+      </has-more>
+    </glance>
+    <glance kind="obligation" id="130" name="Midterm" due="2026-02-20T14:30" state="not_started" optional="false" done_by="">
+      <course ref="3mi3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="97" name="Proposal Peer Review" due="2026-02-20T23:59" state="not_started" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="93" name="Reflection 5" due="2026-02-23T23:59" state="not_started" optional="false" done_by="">
+      <course ref="2px3"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="74" name="Lab 3" due="2026-02-24T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2aa4"/>
+      <has-more>
+        <link-kind>about</link-kind>
+      </has-more>
+    </glance>
+  </band-a>
+  <band-b>
+    <glance kind="obligation" id="102" name="Workshop Sign-up" due="2026-01-15" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="41" name="Assignment 1" due="2026-01-16T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="89" name="Reflection 1" due="2026-01-19T23:59" state="done">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="72" name="Lab 1" due="2026-01-20T23:59" state="done">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="111" name="Problem Set 1" due="2026-01-21T23:59" state="done">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="124" name="Assignment 1" due="2026-01-23T23:59" state="done">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="90" name="Reflection 2" due="2026-01-26T23:59" state="done">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="76" name="Quiz 1" due="2026-01-28T09:30" state="done">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="95" name="Team Charter" due="2026-01-30T23:59" state="done">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="113" name="Problem Set 3" due="2026-02-25T23:59" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="45" name="Assignment 5" due="2026-02-27T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="94" name="Reflection 6" due="2026-03-02T23:59" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="128" name="Project Checkpoint" due="2026-03-06T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="46" name="Assignment 6" due="2026-03-06T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="98" name="Proposal Final" due="2026-03-06T23:59" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="78" name="Quiz 3" due="2026-03-11T09:30" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="126" name="Assignment 3" due="2026-03-13T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="75" name="Lab 4" due="2026-03-17T23:59" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="114" name="Problem Set 4" due="2026-03-18T23:59" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="116" name="Term Test 2" due="2026-03-19T18:30" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="47" name="Assignment 7" due="2026-03-20T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="99" name="Oral Presentation" due="2026-03-24T13:30" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="54" name="Bonus Mark Survey" due="2026-03-27" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="48" name="Assignment 8" due="2026-03-27T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="81" name="Peer Feedback Form" due="2026-03-30" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+    <glance kind="obligation" id="119" name="Course Evaluation" due="2026-04-03" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="49" name="Assignment 9" due="2026-04-06T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="100" name="Portfolio" due="2026-04-08T23:59" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="129" name="Project Report" due="2026-04-10T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="131" name="Kaggle Bonus" due="2026-04-10T23:59" state="not_started">
+      <course ref="3mi3"/>
+    </glance>
+    <glance kind="obligation" id="101" name="Attendance" due="" state="not_started">
+      <course ref="2px3"/>
+    </glance>
+    <glance kind="obligation" id="117" name="Final Exam" due="" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="118" name="Tutorial Participation" due="" state="not_started">
+      <course ref="2fa3"/>
+    </glance>
+    <glance kind="obligation" id="52" name="Final Exam" due="" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="80" name="Final Exam" due="" state="not_started">
+      <course ref="2aa4"/>
+    </glance>
+  </band-b>
+</ring-0>
+
+====================================================================================================
+GROUP B  look_at(course) over 2c03, the composed obligation list
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+B0  incumbent: <obligations> container
+     1848 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <obligations>
+    <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+    <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+    <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+    <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+    <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+    <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+    <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+    <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+    <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+    <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+  </obligations>
+</course>
+
+----------------------------------------------------------------------------------------------------
+B1  no container, glances as direct children
+     1787 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+  <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+  <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+  <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+  <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+  <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+  <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+  <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+  <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+  <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+</course>
+
+----------------------------------------------------------------------------------------------------
+B2  banded inside the course view
+     1787 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+  <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+  <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+  <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+  <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+  <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+  <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+  <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+  <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+  <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+  <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+  <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+</course>
+
+----------------------------------------------------------------------------------------------------
+B3  sectioned scheduled / undated
+     1869 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <scheduled>
+    <glance kind="obligation" id="41" course="2c03" name="Assignment 1" due="2026-01-16T23:59" state="done"/>
+    <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done"/>
+    <glance kind="obligation" id="53" course="2c03" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="" has-more="about"/>
+    <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done"/>
+    <glance kind="obligation" id="50" course="2c03" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="" has-more="about builds-on"/>
+    <glance kind="obligation" id="44" course="2c03" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="" has-more="builds-on"/>
+    <glance kind="obligation" id="45" course="2c03" name="Assignment 5" due="2026-02-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="46" course="2c03" name="Assignment 6" due="2026-03-06T23:59" state="not_started"/>
+    <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started"/>
+    <glance kind="obligation" id="47" course="2c03" name="Assignment 7" due="2026-03-20T23:59" state="not_started"/>
+    <glance kind="obligation" id="54" course="2c03" name="Bonus Mark Survey" due="2026-03-27" state="not_started"/>
+    <glance kind="obligation" id="48" course="2c03" name="Assignment 8" due="2026-03-27T23:59" state="not_started"/>
+    <glance kind="obligation" id="49" course="2c03" name="Assignment 9" due="2026-04-06T23:59" state="not_started"/>
+  </scheduled>
+  <undated>
+    <glance kind="obligation" id="52" course="2c03" name="Final Exam" due="" state="not_started"/>
+  </undated>
+</course>
+
+----------------------------------------------------------------------------------------------------
+B4  0082 obeyed inside each composed member
+     2154 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <glance kind="obligation" id="41" name="Assignment 1" due="2026-01-16T23:59" state="done">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="53" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="">
+    <course ref="2c03"/>
+    <has-more kind="about"/>
+  </glance>
+  <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="50" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="">
+    <course ref="2c03"/>
+    <has-more kind="about"/>
+    <has-more kind="builds-on"/>
+  </glance>
+  <glance kind="obligation" id="44" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+    <course ref="2c03"/>
+    <has-more kind="builds-on"/>
+  </glance>
+  <glance kind="obligation" id="45" name="Assignment 5" due="2026-02-27T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="46" name="Assignment 6" due="2026-03-06T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="47" name="Assignment 7" due="2026-03-20T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="54" name="Bonus Mark Survey" due="2026-03-27" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="48" name="Assignment 8" due="2026-03-27T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="49" name="Assignment 9" due="2026-04-06T23:59" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+  <glance kind="obligation" id="52" name="Final Exam" due="" state="not_started">
+    <course ref="2c03"/>
+  </glance>
+</course>
+
+----------------------------------------------------------------------------------------------------
+B5  THE SOURCE CUT: sections from 0045 + 0046, composed batch as a fourth source
+     3632 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <annotations>
+    <sticky_note id="55" category="policy" origin="course-outline">
+      Late assignments carry no penalty, but there is a limit of 12 late days
+      across all assignments combined and a maximum of 3 late days on any one
+      assignment without an MSAF. Exceeding either limit means late
+      assignments are no longer accepted.
+    </sticky_note>
+    <sticky_note id="56" category="policy" origin="course-outline">
+      Two marking schemes exist and whichever gives the higher grade is used.
+      Scheme 1: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 10/10/30.
+      Scheme 2: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 0/0/50.
+    </sticky_note>
+    <sticky_note id="57" category="policy" origin="course-outline">
+      Tutorial attendance is worth 5% for attending 10 of 12 tutorials. Two
+      tutorials may be skipped with no penalty; after that each tutorial is
+      worth 0.5% of the final grade. An MSAF'd tutorial counts as present.
+      This requirement has no obligation row - see failure F1.
+    </sticky_note>
+    <sticky_note id="58" category="correction" origin="announcement">
+      Snow day (Jan 26): everybody was given credit for one tutorial they did
+      not attend, so only 9 tutorials attended in person are needed for the
+      full 5%.
+    </sticky_note>
+  </annotations>
+  <links/>
+  <obligations>
+    <glance kind="obligation" id="41" name="Assignment 1" due="2026-01-16T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="53" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress" optional="true" done_by="">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="50" name="Midterm 1" due="2026-02-06T10:30" state="done" optional="false" done_by="">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="44" name="Assignment 4" due="2026-02-13T23:59" state="in_progress" optional="false" done_by="">
+      <course ref="2c03"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="45" name="Assignment 5" due="2026-02-27T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="46" name="Assignment 6" due="2026-03-06T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="47" name="Assignment 7" due="2026-03-20T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="54" name="Bonus Mark Survey" due="2026-03-27" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="48" name="Assignment 8" due="2026-03-27T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="49" name="Assignment 9" due="2026-04-06T23:59" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="52" name="Final Exam" due="" state="not_started">
+      <course ref="2c03"/>
+    </glance>
+  </obligations>
+</course>
+
+----------------------------------------------------------------------------------------------------
+B6  B5 + the line as ONE field set (0082's `band plus has-more`), course ref dropped
+     3507 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <annotations>
+    <sticky_note id="55" category="policy" origin="course-outline">
+      Late assignments carry no penalty, but there is a limit of 12 late days
+      across all assignments combined and a maximum of 3 late days on any one
+      assignment without an MSAF. Exceeding either limit means late
+      assignments are no longer accepted.
+    </sticky_note>
+    <sticky_note id="56" category="policy" origin="course-outline">
+      Two marking schemes exist and whichever gives the higher grade is used.
+      Scheme 1: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 10/10/30.
+      Scheme 2: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 0/0/50.
+    </sticky_note>
+    <sticky_note id="57" category="policy" origin="course-outline">
+      Tutorial attendance is worth 5% for attending 10 of 12 tutorials. Two
+      tutorials may be skipped with no penalty; after that each tutorial is
+      worth 0.5% of the final grade. An MSAF'd tutorial counts as present.
+      This requirement has no obligation row - see failure F1.
+    </sticky_note>
+    <sticky_note id="58" category="correction" origin="announcement">
+      Snow day (Jan 26): everybody was given credit for one tutorial they did
+      not attend, so only 9 tutorials attended in person are needed for the
+      full 5%.
+    </sticky_note>
+  </annotations>
+  <links/>
+  <obligations>
+    <glance kind="obligation" id="41" name="Assignment 1" due="2026-01-16T23:59" state="done">
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done">
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="53" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress">
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done">
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="50" name="Midterm 1" due="2026-02-06T10:30" state="done">
+      <has-more kind="about"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="44" name="Assignment 4" due="2026-02-13T23:59" state="in_progress">
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="45" name="Assignment 5" due="2026-02-27T23:59" state="not_started">
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="46" name="Assignment 6" due="2026-03-06T23:59" state="not_started">
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started">
+      <has-more kind="about"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="47" name="Assignment 7" due="2026-03-20T23:59" state="not_started">
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="54" name="Bonus Mark Survey" due="2026-03-27" state="not_started">
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="48" name="Assignment 8" due="2026-03-27T23:59" state="not_started">
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="49" name="Assignment 9" due="2026-04-06T23:59" state="not_started">
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="52" name="Final Exam" due="" state="not_started">
+      <has-more kind="about"/>
+    </glance>
+  </obligations>
+</course>
+
+----------------------------------------------------------------------------------------------------
+B7  B6 keeping the redundant <course ref> on every member
+     3885 chars
+----------------------------------------------------------------------------------------------------
+<course id="2c03" name="Data Structures and Algorithms" term="winter-2026">
+  <annotations>
+    <sticky_note id="55" category="policy" origin="course-outline">
+      Late assignments carry no penalty, but there is a limit of 12 late days
+      across all assignments combined and a maximum of 3 late days on any one
+      assignment without an MSAF. Exceeding either limit means late
+      assignments are no longer accepted.
+    </sticky_note>
+    <sticky_note id="56" category="policy" origin="course-outline">
+      Two marking schemes exist and whichever gives the higher grade is used.
+      Scheme 1: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 10/10/30.
+      Scheme 2: Tutorials 5%, Assignments 45%, Midterm/Midterm/Final 0/0/50.
+    </sticky_note>
+    <sticky_note id="57" category="policy" origin="course-outline">
+      Tutorial attendance is worth 5% for attending 10 of 12 tutorials. Two
+      tutorials may be skipped with no penalty; after that each tutorial is
+      worth 0.5% of the final grade. An MSAF'd tutorial counts as present.
+      This requirement has no obligation row - see failure F1.
+    </sticky_note>
+    <sticky_note id="58" category="correction" origin="announcement">
+      Snow day (Jan 26): everybody was given credit for one tutorial they did
+      not attend, so only 9 tutorials attended in person are needed for the
+      full 5%.
+    </sticky_note>
+  </annotations>
+  <links/>
+  <obligations>
+    <glance kind="obligation" id="41" name="Assignment 1" due="2026-01-16T23:59" state="done">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done">
+      <course ref="2c03"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="53" name="IDEA Conference" due="2026-01-27T17:00" state="in_progress">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done">
+      <course ref="2c03"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="50" name="Midterm 1" due="2026-02-06T10:30" state="done">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="44" name="Assignment 4" due="2026-02-13T23:59" state="in_progress">
+      <course ref="2c03"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="45" name="Assignment 5" due="2026-02-27T23:59" state="not_started">
+      <course ref="2c03"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="46" name="Assignment 6" due="2026-03-06T23:59" state="not_started">
+      <course ref="2c03"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+      <has-more kind="builds-on"/>
+    </glance>
+    <glance kind="obligation" id="47" name="Assignment 7" due="2026-03-20T23:59" state="not_started">
+      <course ref="2c03"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="54" name="Bonus Mark Survey" due="2026-03-27" state="not_started">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+    </glance>
+    <glance kind="obligation" id="48" name="Assignment 8" due="2026-03-27T23:59" state="not_started">
+      <course ref="2c03"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="49" name="Assignment 9" due="2026-04-06T23:59" state="not_started">
+      <course ref="2c03"/>
+      <has-more/>
+    </glance>
+    <glance kind="obligation" id="52" name="Final Exam" due="" state="not_started">
+      <course ref="2c03"/>
+      <has-more kind="about"/>
+    </glance>
+  </obligations>
+</course>
+
+====================================================================================================
+GROUP C  the block: one obligation's own render, 2c03 Midterm 1
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+C0  incumbent: <parts> <annotations> <links>
+     1306 chars
+----------------------------------------------------------------------------------------------------
+<obligation id="50" name="Midterm 1" due="2026-02-06T10:30" done_by="" optional="false">
+  <course ref="2c03"/>
+  <grade_share conditional="true">10</grade_share>
+  <parts>
+    <part>Object-Oriented Programming</part>
+    <part>Arrays and Linked Lists</part>
+    <part>Algorithm Analysis</part>
+    <part>Stacks, Queues, and Lists</part>
+  </parts>
+  <annotations>
+    <progress id="70" state="done" origin="owner"/>
+    <sticky_note id="60" category="logistics" origin="announcement">
+      Midterm 1 runs during regular class time, 10:30 to 11:20, on Friday
+      February 6, in LRW B1007 rather than the regular classroom.
+    </sticky_note>
+    <sticky_note id="61" category="clarification" origin="announcement">
+      Coverage clarification: the circular array implementation of a Queue IS
+      on the test; the Circular Queue data structure is NOT.
+    </sticky_note>
+  </annotations>
+  <links>
+    <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done" role="builds-on"/>
+    <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done" role="builds-on"/>
+    <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started" role="builds-on"/>
+  </links>
+</obligation>
+
+----------------------------------------------------------------------------------------------------
+C1  no containers at all
+     1199 chars
+----------------------------------------------------------------------------------------------------
+<obligation id="50" name="Midterm 1" due="2026-02-06T10:30" done_by="" optional="false">
+  <course ref="2c03"/>
+  <grade_share conditional="true">10</grade_share>
+  <part>Object-Oriented Programming</part>
+  <part>Arrays and Linked Lists</part>
+  <part>Algorithm Analysis</part>
+  <part>Stacks, Queues, and Lists</part>
+  <progress id="70" state="done" origin="owner"/>
+  <sticky_note id="60" category="logistics" origin="announcement">
+    Midterm 1 runs during regular class time, 10:30 to 11:20, on Friday
+    February 6, in LRW B1007 rather than the regular classroom.
+  </sticky_note>
+  <sticky_note id="61" category="clarification" origin="announcement">
+    Coverage clarification: the circular array implementation of a Queue IS
+    on the test; the Circular Queue data structure is NOT.
+  </sticky_note>
+  <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done" role="builds-on"/>
+  <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done" role="builds-on"/>
+  <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started" role="builds-on"/>
+</obligation>
+
+----------------------------------------------------------------------------------------------------
+C2  a container only where a channel exists
+     1250 chars
+----------------------------------------------------------------------------------------------------
+<obligation id="50" name="Midterm 1" due="2026-02-06T10:30" done_by="" optional="false">
+  <course ref="2c03"/>
+  <grade_share conditional="true">10</grade_share>
+  <part>Object-Oriented Programming</part>
+  <part>Arrays and Linked Lists</part>
+  <part>Algorithm Analysis</part>
+  <part>Stacks, Queues, and Lists</part>
+  <annotations>
+    <progress id="70" state="done" origin="owner"/>
+    <sticky_note id="60" category="logistics" origin="announcement">
+      Midterm 1 runs during regular class time, 10:30 to 11:20, on Friday
+      February 6, in LRW B1007 rather than the regular classroom.
+    </sticky_note>
+    <sticky_note id="61" category="clarification" origin="announcement">
+      Coverage clarification: the circular array implementation of a Queue IS
+      on the test; the Circular Queue data structure is NOT.
+    </sticky_note>
+  </annotations>
+  <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done" role="builds-on"/>
+  <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done" role="builds-on"/>
+  <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started" role="builds-on"/>
+</obligation>
+
+----------------------------------------------------------------------------------------------------
+C3  <neighbours/> for links, annotations flat
+     1236 chars
+----------------------------------------------------------------------------------------------------
+<obligation id="50" name="Midterm 1" due="2026-02-06T10:30" done_by="" optional="false">
+  <course ref="2c03"/>
+  <grade_share conditional="true">10</grade_share>
+  <part>Object-Oriented Programming</part>
+  <part>Arrays and Linked Lists</part>
+  <part>Algorithm Analysis</part>
+  <part>Stacks, Queues, and Lists</part>
+  <progress id="70" state="done" origin="owner"/>
+  <sticky_note id="60" category="logistics" origin="announcement">
+    Midterm 1 runs during regular class time, 10:30 to 11:20, on Friday
+    February 6, in LRW B1007 rather than the regular classroom.
+  </sticky_note>
+  <sticky_note id="61" category="clarification" origin="announcement">
+    Coverage clarification: the circular array implementation of a Queue IS
+    on the test; the Circular Queue data structure is NOT.
+  </sticky_note>
+  <neighbours>
+    <glance kind="obligation" id="42" course="2c03" name="Assignment 2" due="2026-01-23T23:59" state="done" role="builds-on"/>
+    <glance kind="obligation" id="43" course="2c03" name="Assignment 3" due="2026-01-30T23:59" state="done" role="builds-on"/>
+    <glance kind="obligation" id="51" course="2c03" name="Midterm 2" due="2026-03-13" state="not_started" role="builds-on"/>
+  </neighbours>
+</obligation>
+
+----------------------------------------------------------------------------------------------------
+C4  THE SOURCE CUT on an obligation - same three sections as B5
+     1384 chars
+----------------------------------------------------------------------------------------------------
+<obligation id="50" name="Midterm 1" due="2026-02-06T10:30" done_by="" optional="false">
+  <course ref="2c03"/>
+  <grade_share conditional="true">10</grade_share>
+  <parts>
+    <part>Object-Oriented Programming</part>
+    <part>Arrays and Linked Lists</part>
+    <part>Algorithm Analysis</part>
+    <part>Stacks, Queues, and Lists</part>
+  </parts>
+  <annotations>
+    <progress id="70" state="done" origin="owner"/>
+    <sticky_note id="60" category="logistics" origin="announcement">
+      Midterm 1 runs during regular class time, 10:30 to 11:20, on Friday
+      February 6, in LRW B1007 rather than the regular classroom.
+    </sticky_note>
+    <sticky_note id="61" category="clarification" origin="announcement">
+      Coverage clarification: the circular array implementation of a Queue IS
+      on the test; the Circular Queue data structure is NOT.
+    </sticky_note>
+  </annotations>
+  <links>
+    <glance kind="obligation" id="42" name="Assignment 2" due="2026-01-23T23:59" state="done" role="builds-on">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="43" name="Assignment 3" due="2026-01-30T23:59" state="done" role="builds-on">
+      <course ref="2c03"/>
+    </glance>
+    <glance kind="obligation" id="51" name="Midterm 2" due="2026-03-13" state="not_started" role="builds-on">
+      <course ref="2c03"/>
+    </glance>
+  </links>
+</obligation>
+
+====================================================================================================
+SIZE, over the REAL 2c03 rows only (14 obligations). 0077 bars any count
+taken from the four derived courses; these are the only auditable numbers here.
+====================================================================================================
+  band A flat            n=14  min=139  max=161  mean=154
+  band B flat            n=14  min=94  max=115  mean=108
+  band A structured      n=14  min=167  max=207  mean=182
+  band B structured      n=14  min=112  max=133  mean=126
+  block (Midterm 1, C0)          1306 chars
+  band A count over real 2c03    3 of 14
+  has-more non-empty, `about` alone   6 of 14   <- 0092 states 6 of 14
+  has-more non-empty, incl hand links 10 of 14   <- NOT evidence, links are made up
+
+  Ring 0 at 55 rows, extrapolated from REAL per-row cost and 2c03's own band ratio
+  (band A = 21% of rows; that ratio comes from ONE course and 2px3 would move it):
+    flat        6482 chars
+    structured  7598 chars   (+17%)
