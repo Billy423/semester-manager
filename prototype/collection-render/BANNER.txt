@@ -1,0 +1,40 @@
+================================================================================
+SUPERSEDED BY settled.py. Read this before reading variants.txt.
+================================================================================
+Every variant below was rendered to be looked at and MOST WERE REJECTED BY
+LOOKING. What replaced them is in settled.py / settled-output.txt.
+
+Things every variant here shows that were ruled AGAINST during #80:
+
+  <glance kind="obligation" ...>  - the element name IS the kind (0082), so a
+                                    neighbour is <obligation .../> and the
+                                    attribute `kind` never appears
+  <links> / <link>                - renamed <neighbours> / <edge>; `link` is
+                                    CONTEXT.md's name for the internal record
+  has-more / related-by           - absorbed. The edge carries the relation, so
+                                    the projection has no place in a node render
+  a per-row band inside a read    - the line is ONE field set; a per-row band
+                                    imports 0038's RESIDENCY into a READ
+  course= as an attribute         - obligation.course is a Ref (0082 rule 2)
+  role= for an edge's type        - 0012 gives `spec` a role of given/owed
+  snake case on non-object names  - done_by, grade_share, created_at
+
+It is kept for the same reason fall26:evidence/2026-08-28-ring-0 kept its own
+rejected table: the rejections were reached BY LOOKING AT IT. It is a record of
+what was seen. It is not a design, and nothing should be built from it.
+================================================================================
+
+What is real and what is not, in every file here:
+
+  REAL     2c03: 14 obligations, 11 sticky notes, from
+           fall26:app/tests/fixtures/2c03.json, hand-corrected by Billy 2026-08-28.
+  MADE UP  every `progress` record, four `builds-on` edges, and every timestamp.
+           Ruled admissible by Billy at #80: this ticket looks at the render,
+           not at whether the state is true of the world.
+  DERIVED  2aa4, 2px3, 2fa3, 3mi3 and all their rows. SHAPE ONLY. Per 0077 a
+           derived fixture is code, not evidence: NO COUNT FROM THESE ROWS MAY
+           ENTER #80'S ANSWER.
+
+AS_OF = 2026-02-09, picked because winter-2026 is a past term. The band window
+is NOT a free parameter: 0042 rules it as [today-7d, today+14d].
+================================================================================
