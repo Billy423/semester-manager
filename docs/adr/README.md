@@ -65,7 +65,7 @@ What a field is, when one exists, how a thing is named, and what was removed and
 | [`0036`](0036-a-note-points-at-a-node-and-its-category-is-open.md) | A note is an entity that points at a node; `category` is an open string set on purpose, and provenance confers no immutability |
 | [`0037`](0037-the-graveyard.md) | The graveyard: removed fields, their reasons, and a standing rule against re-adding them |
 
-## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092`
+## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092` · `0094`–`0099`
 
 What the coordinator holds while it decides, what it walks, and what it discards.
 
@@ -86,6 +86,12 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0085`](0085-the-question-parameter-is-instrumentation.md) | The `question` parameter is development instrumentation and is not in the production signature |
 | [`0089`](0089-the-read-side-is-two-verbs-and-refresh-returns-whole-lines.md) | The read side is two verbs, and the refresh returns whole lines rather than a delta |
 | [`0092`](0092-has-more-carries-link-kinds-not-a-boolean.md) | `has-more` carries the link kinds present on the node, not a boolean and not a count |
+| [`0094`](0094-a-render-s-sections-are-cut-by-source.md) | A render's sections are cut by source, and a composed batch is a fourth source |
+| [`0095`](0095-each-section-carries-its-own-depth.md) | Each section carries its own depth, and that shape is what enforces the discard |
+| [`0096`](0096-a-neighbour-arrives-inside-an-edge.md) | A neighbour arrives inside an `<edge>`, and the projection `has-more` carried is absorbed by it |
+| [`0097`](0097-an-id-marks-an-object-and-a-pair-carries-content.md) | An `id` marks an addressable object, an open/close pair carries content, and a member omits what its container fixes |
+| [`0098`](0098-the-render-spells-back-what-is-named-back.md) | The render uses the schema's own spelling for every name the coordinator can name back |
+| [`0099`](0099-0082-places-a-field-it-does-not-select-one.md) | `0082` places a field; it does not select one, and the first selection cut is the timestamps |
 
 ## Inbound — `0047`–`0058` · `0086`–`0087` · `0090`
 

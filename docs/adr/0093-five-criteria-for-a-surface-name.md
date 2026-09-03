@@ -25,7 +25,8 @@ The ban in criterion 2 bites in fewer places than it looks, because the surface 
 | `land(...)` | kept. `CONTEXT.md`'s `landing` entry avoids `land()` only as the name of the **concern**, which endorses it as the name of one operation |
 | `set` · `attach` · `detach` · `delete` · `create` | the second-order primitives. `attach` and `detach` are the `sticky_note` entry's own words; `delete` is `repair method`'s; `0059` consequence 2 forbids auto-**add**, not `create` |
 | `id` | the read parameter. An id is unique across the one id space; `handle` names no distinction the surface can act on |
-| `<glance>` | a neighbour's render. It pairs with `look_at` - you glance to decide whether to look - which is `0060`'s *going one level deeper is one more call* landing on a name |
+| ~~`<glance>`~~ | **retired at #80.** It was a neighbour's render, pairing with `look_at`. `0082`'s own first clause makes the element name the kind, so a neighbour is `<obligation …/>`, and `0096` gives the relation itself `<neighbours>` / `<edge>` |
+| `<neighbours>` · `<edge>` | the neighbourhood and one relation in it. `<links>` failed criterion 2 - `link` is `CONTEXT.md`'s name for the internal record. An edge carries `id`, `type` and `direction`; `type` rather than `role`, because `0012` gives `spec` a `role ∈ {given, owed}` |
 
 **`attach` stays a primitive although only annotations use it today.** The primitive set is defined against the kind set that will exist, not against the one use case that exists; the alternative, folding the `about` link into annotation creation, would have to be undone the moment a second link kind acquires a writer.
 
@@ -45,7 +46,7 @@ The ban in criterion 2 bites in fewer places than it looks, because the surface 
 
 ## Repairs this record owes
 
-`<glance>` contradicts two landed records, which name the neighbour element `<ref>` verbatim: `0082`'s *"A **neighbour** arrives as `<ref>`"* and `CONTEXT.md`'s `the line` entry, *"one self-closing `<ref>`"*. Both are repaired at source rather than bannered, per `0084`'s precedent.
+`<glance>` contradicted two landed records, which named the neighbour element `<ref>` verbatim: `0082`'s *"A **neighbour** arrives as `<ref>`"* and `CONTEXT.md`'s `the line` entry, *"one self-closing `<ref>`"*. Both were repaired at source rather than bannered, per `0084`'s precedent. **#80 then retired `<glance>` itself** and repaired the same two records again, plus `0089` and this table - the second rename in four days, and the reason is that criterion 4's audit reached the element only after `0092` made `has-more` set-valued.
 
 `id` narrows `CONTEXT.md`'s `handle` entry, which defines a handle as what a surface prints or resolves. At the surface the two coincide, and `0061` is amended to say so rather than to leave *"every read must return their handles"* reading as though a second kind of value existed.
 

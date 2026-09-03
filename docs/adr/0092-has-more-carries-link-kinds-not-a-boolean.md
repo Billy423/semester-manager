@@ -16,7 +16,9 @@
 
 ## What this record does not decide
 
-**What the field is called, and where it lives.** A node's own block lists its neighbours in full, so the field may be redundant there and belong only to ring 0, where they cannot be listed. If it means different things in the two places, `0024` bites. Both questions travel with the render of a collection, which `0082` does not reach.
+**What the field is called.** `related-by` was the live proposal after `link-kinds` was rejected for using schema-internal words, and neither survives: `0093` criteria 2 and 4 cannot both be met while the value is a link kind, because any name that honestly says what the value holds uses the schema's vocabulary. The name travels with **ring 0's own render**, which is where the field now lives.
+
+**Where it lives is decided.** #80 ruled it **absorbed** in a node's render: `<neighbours>` lists the edges, so their kinds are readable off them, and carrying the projection beside them states one fact twice - which is the `0024` bite this section anticipated. It survives **only where the neighbourhood cannot be listed**, and that is ring 0. This record's ruling on the field's **value** is untouched; what moved is where it appears (`0096`).
 
 ## A gap in `0082` this exposes
 

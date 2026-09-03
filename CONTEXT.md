@@ -23,7 +23,7 @@ A record with a `kind`, an id in the single id space, and that kind's declared f
 _Avoid_: entity · *record* used interchangeably
 
 **link**:
-A typed, directed relation between two refs, stored as its own record rather than as a field on either end.
+A typed, directed relation between two refs, stored as its own record rather than as a field on either end. **At the agent-facing surface it renders as `<edge>` inside `<neighbours>`** (`0096`), because `link` is this glossary's word for the internal record and `0093` criterion 2 bars naming a surface element after it.
 _Avoid_: edge
 
 **link kind**:
@@ -177,13 +177,13 @@ The operation that follows a node's edges and reads its neighbours' definitions.
 _Avoid_: search · find_material · retrieval · treating the walk and a by-query store read as one operation
 
 **the block**:
-A node's own render under `look_at` - all of its own fields, its annotations carrying their content, and its neighbours as lines. Derived from the kind's field table rather than designed (`0082`), so it is a family of shapes, one per kind.
-_Avoid_: record - that is the stored thing, not its render · view · *the full node* · treating the block as one shape rather than one per kind
+A node's own render under `look_at`. Its **sections are cut by source** (`0094`) and each carries its own depth (`0095`): the node's own fields in full, `<annotations>` carrying their content, `<neighbours>` as lines, and one further section per batch the kind composes. Fields are placed within a section by `0082`'s four rules, so it is a family of shapes, one per kind.
+_Avoid_: record - that is the stored thing, not its render · view · *the full node* · treating the block as one shape rather than one per kind · reading `0082` as deciding the sections, which it says it does not reach
 
 **the line**:
-A neighbour's render - one self-closing `<glance>` element carrying only what decides whether that neighbour is worth one `look_at`. Per kind: obligation's is ring 0's band, course's is `id` `name` `term`. `sticky_note` and `progress` need none - they arrive through their own channel rather than as neighbours - and the debt for `artifact` and `concept` travels with their layers, deferred at #20, #19 and #17, rather than standing as an item of its own. A `Ref`-typed **field** is not a line; it is a bare pointer. The element was named `<ref>` until #62 renamed it, because one word was doing both jobs.
-_Note_: how a **collection** of these renders - sections, their depth, ordering within one - is not decided anywhere; `0082`'s four rules derive from one kind's field table and do not reach it.
-_Avoid_: *summary* - that is a written object and only `artifact` has one · preview · row · reading *line* as a physical line of output
+The render of a node that is one `look_at` away - **one self-closing element named for its own kind**, `<obligation id="51" …/>`, carrying only what decides whether it is worth that call. It appears in two places: inside an `<edge>`, and inside a composed section (`0094`). Per kind it is **one** field set that does not vary per row: obligation's is ring 0's **band B** plus the edge's `type`, course's is `id` `name` `term`. `sticky_note` and `progress` need none - they arrive through their own channel rather than as neighbours - and the debt for `artifact` and `concept` travels with their layers, deferred at #20, #19 and #17. A `Ref`-typed **field** is not a line; it is a bare pointer. The element was `<ref>` until #62, then `<glance>` until #80 retired it, because `0082`'s own first clause makes the element name the kind.
+_Note_: the **field set** is still not derivable - obligation's is a transfer from `0038`'s residency set, and a new kind's is one ruling per kind (`0095`).
+_Avoid_: *summary* - that is a written object and only `artifact` has one · preview · row · reading *line* as a physical line of output · calling a neighbour's line a `<glance>`
 
 **dispatch**:
 Sending a question out of the coordinator's context - to a subagent, a task session, or the owner himself - and receiving back a value in the same shape as every peer's. The context that produced the value stays outside.
