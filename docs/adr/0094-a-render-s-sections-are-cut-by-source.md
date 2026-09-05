@@ -16,7 +16,7 @@
 
 **`0045` is not the record doing this work, and an earlier draft of this ruling cited it wrongly.** `0045` says *"The coordinator sees what a node **IS**; it never sees what a node **SAYS**"* - **a node**, not someone about it - and its next sentence, *"Rendering a node's own summary is a skeleton read and is allowed"*, shows the subject is the store boundary. Its scope clause is explicit: *"What this record governs is what enters the coordinator's context, never what the coordinator may do"*, and it names using it one aspect over as *"the error corrected here"*. The misreading also ran against this render: under *never what someone says about it*, `<annotations>` carrying an annotation's full text would be barred, and `0046` requires exactly that.
 
-**Ordering within a section is `0082`'s and is not re-decided here** - the material's key, tiebroken by the handle, never array order. A composed obligation list orders by `due`; where a `due` is null the row has no key, and it sorts last by a decision made in the render rather than by anything `0082` says.
+**Ordering within a section is `0082`'s and is not re-decided here** - the material's key, tiebroken by the handle, never array order. A composed obligation list orders by `due`; where a `due` is null the row has no key, and it sorts last by a decision made in the render rather than by anything `0082` says. **For ring 0 that is not a render decision**: `0041` rules nulls last and the null tiebreak, which this record and #80 both missed (`0100`).
 
 ## What this record does not decide
 

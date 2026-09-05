@@ -1,4 +1,4 @@
-# Ring 0 carries seven routing fields; `parts` and `grade_share` are excluded, and `grade_share`'s exclusion is measured
+# Ring 0 carries seven routing fields; `parts` and `grade_share` are excluded, and `grade_share`'s exclusion rests on a corpus argument
 
 Ring 0 carries `course`, `name`, `due`, `state`, `optional`, `done_by` and `has-more`; band B drops the last three. `parts` is out because it answers *what is this about* rather than *where do I look next*; `grade_share` is out because a rendered column of shares reads as a partition of the grade that it is not, which is the single largest measured faithfulness defect in the corpus. **Excluded from the projection is not unreadable**: ring 0 governs residency, and `parts` comes back with any read of the obligation record.
 
@@ -7,6 +7,8 @@ band A "active" : course · name · due · state · optional · done_by · has-m
 band B "known"  : course · name · due · state
 neither band    : parts · grade_share · grade_share_conditional
 ```
+
+**What this record fixes is one clause of ring 0, and it is not settled.** `0100` reads ring 0 as a view and places this one as **selection** - which fields are held. The seven were chosen by applying ring 0's purpose as a **test over `obligation`'s existing field table**, which is construction bottom-up rather than the top-down derivation `0070` asks of an interaction requirement, and ring 0's routing purpose is undefined. The exclusions below carry arguments of their own; `grade_share`'s was audited against the 2c03 corpus at #82 and holds, but **an argument that stands is not thereby a derivation**, so neither half of this clause is settled.
 
 **The only sizing number that matters is that ring 0 for five courses is roughly 55 obligations.** **Its evidence base is two courses that look alike:** 2c03 and 2aa4 are both topic-dense and obligation-sparse, and 2px3 - the obligation-dense shape - was excluded throughout the material this figure comes from. The one course left out is the one whose shape would move the number.
 

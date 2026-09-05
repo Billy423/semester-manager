@@ -158,10 +158,12 @@ _Avoid_: calling it `summary` unqualified
 
 **ring 0**:
 The obligation layer under a residency policy: the fixed-shape, uniform-depth set of obligation fields the coordinator holds in its conversation context so it can tell where to look next. It governs **residency, not readability**, is field-grained rather than node-grained, and is not a third persisted thing.
-_Avoid_: *the projection* (bare) · *the obligation layer* as a synonym · the resident projection · ring 0 meaning what is **observable** · ring 0 meaning what is **readable**
+_Note_: **its shape is not settled** (`0100`). Read as a view it has four clauses, and none is derived from the purpose above, because routing is undefined: **admission** (`0042`) is overturnable, **selection** (`0038`) was filtered against the purpose rather than derived from it, **arrangement** has a ruled order and an open grouping since #82 struck `0041`'s, and **refresh** (`0089`) rests on a ground of its own but parks its cadence and returns whatever selection holds.
+_Avoid_: *the projection* (bare) · *the obligation layer* as a synonym · the resident projection · ring 0 meaning what is **observable** · ring 0 meaning what is **readable** · **materialized view** - `0019` bars a third persisted thing, and `0089` hands a local file to the implementation rather than making it ring 0's nature · treating its shape as settled because `0038` names seven fields
 
 **band A** / **band B**:
 The two halves of ring 0's partition. **Band A, "active"**, is any obligation triggered by a near `due`, by a near `done_by`, or by work already in progress; **band B, "known"**, is everything else, including obligations with no date.
+_Note_: the partition is ring 0's **admission** clause and `0042` is overturnable once routing is defined (`0100`, ruled at #82). The two band names are this glossary's, not `0042`'s.
 _Avoid_: *the active window* for band A - the window is one of three triggers, not the partition · urgent / backlog
 
 **coordinator**:

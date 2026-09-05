@@ -19,7 +19,7 @@ a composed section      -> one line     0060
 
 ## The line's field set is not derivable, and this record does not supply one
 
-`0082` sets obligation's line by a **transfer** - `0038` chose that field set for **residency**, and it is reused for *is this worth one call* because `ring-0.md` §1 states the same criterion for both. Course's line is all of its fields because it has few. **No rule generates a new kind's line**: the criterion is clear, the field set is one ruling per kind, and `artifact` and `concept` will each need one when their layers land (#20, #19, #17).
+`0082` sets obligation's line by a **transfer** - `0038` chose that field set for **residency**, and it is reused for *is this worth one call* because `ring-0.md` §1 states the same criterion for both. Course's line is all of its fields because it has few. The transfer is sound here and reaches no further: `0100` records that `0038` fixes one clause of ring 0 rather than its shape. **No rule generates a new kind's line**: the criterion is clear, the field set is one ruling per kind, and `artifact` and `concept` will each need one when their layers land (#20, #19, #17).
 
 What **is** decided: a line is **one** field set per kind and does not vary per row. `0082` calls obligation's line *"ring 0's band plus `has-more`"*, and band A already carries `has-more`, so *the band* is band B. A line that picked each row's own band would import `0038`'s **residency** computation into a **read**.
 

@@ -65,13 +65,13 @@ What a field is, when one exists, how a thing is named, and what was removed and
 | [`0036`](0036-a-note-points-at-a-node-and-its-category-is-open.md) | A note is an entity that points at a node; `category` is an open string set on purpose, and provenance confers no immutability |
 | [`0037`](0037-the-graveyard.md) | The graveyard: removed fields, their reasons, and a standing rule against re-adding them |
 
-## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092` · `0094`–`0099`
+## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092` · `0094`–`0100`
 
 What the coordinator holds while it decides, what it walks, and what it discards.
 
 | | |
 |---|---|
-| [`0038`](0038-ring-0-carries-seven-routing-fields.md) | Ring 0 carries seven routing fields; `parts` and `grade_share` are excluded, and `grade_share`'s exclusion is measured |
+| [`0038`](0038-ring-0-carries-seven-routing-fields.md) | Ring 0 carries seven routing fields; `parts` and `grade_share` are excluded, and `grade_share`'s exclusion rests on a corpus argument |
 | [`0039`](0039-symmetry-not-shallowness.md) | The observation invariant is symmetry, not shallowness, and it is scoped to the set the judgment ranges over |
 | [`0040`](0040-renderer-truncation-is-asymmetry.md) | Renderer-introduced truncation is asymmetry, so a fixed-width table is not the course level's shape |
 | [`0041`](0041-projection-order-comes-from-the-material.md) | The projection's order is derived from the material, never from write history |
@@ -92,6 +92,7 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0097`](0097-an-id-marks-an-object-and-a-pair-carries-content.md) | An `id` marks an addressable object, an open/close pair carries content, and a member omits what its container fixes |
 | [`0098`](0098-the-render-spells-back-what-is-named-back.md) | The render uses the schema's own spelling for every name the coordinator can name back |
 | [`0099`](0099-0082-places-a-field-it-does-not-select-one.md) | `0082` places a field; it does not select one, and the first selection cut is the timestamps |
+| [`0100`](0100-ring-0-s-shape-is-not-settled.md) | Ring 0's shape is not settled, and reading it as a view is what shows why |
 
 ## Inbound — `0047`–`0058` · `0086`–`0087` · `0090`
 
