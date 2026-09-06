@@ -16,6 +16,8 @@ invented here -> free
 
 **This is the rule that lets `<edge>` stand while `<sticky_note>` keeps its underscore.** The alternative reading - *an id-carrying tag takes the schema spelling* - is falsified by `<edge>` itself, which carries an id while the schema calls the record `Link` (`0096`). `sticky_note` keeps its spelling because it is a **kind discriminator** that goes into a `land()`, not because it carries an id.
 
+**`points-at` and `pointed-by` leave the free class once an intent names them back** (`0101`): a crossing states a direction, so the values are written back and the surface must accept them. Their spelling is #79's.
+
 **`0093` criterion 2 is unaffected.** It bars naming a **verb or a surface element** after the internal structure - `<links>` fails it, `<neighbours>` passes. It does not reach the spelling of a value the coordinator must reproduce, because there the internal name **is** the interface.
 
 ## What is inherited rather than created here

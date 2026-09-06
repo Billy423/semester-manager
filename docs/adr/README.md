@@ -12,7 +12,7 @@ What the system is for, and what it refuses to claim. Every other decision is ju
 
 | | |
 |---|---|
-| [`0001`](0001-three-jobs-not-precise-answers.md) | The system's job is three jobs, and precise question-answering is not one of them |
+| [`0001`](0001-the-system-is-a-knowledge-base.md) | The system is a knowledge base, and precise question-answering is not its job |
 | [`0002`](0002-no-outward-completeness-assertion.md) | The system makes no assertions about its own completeness |
 | [`0003`](0003-job-three-is-set-difference-not-recall-tuning.md) | Surfacing what Billy did not ask about is a deterministic set-difference query, not recall-tuned retrieval |
 | [`0004`](0004-expansion-cost-is-the-size-gate.md) | The size gate is expansion cost, not total graph size |
@@ -21,7 +21,7 @@ What the system is for, and what it refuses to claim. Every other decision is ju
 | [`0007`](0007-park-with-a-wake-condition.md) | Undecided and unimportant questions are parked with the condition that would wake them |
 | [`0081`](0081-negative-answer-names-its-boundary.md) | A negative answer names the boundary it speaks for; a bare "it is not known" shifts the burden to the reader |
 
-## The graph — `0008`–`0023`
+## The graph — `0008`–`0023` · `0102`
 
 Nodes, links, layers, and the two things that are persisted. The vocabulary the rest of the corpus speaks.
 
@@ -43,6 +43,7 @@ Nodes, links, layers, and the two things that are persisted. The vocabulary the 
 | [`0021`](0021-the-skeleton-carries-no-time-axis.md) | The skeleton carries no time axis; time is a separate projection, not nodes and edges |
 | [`0022`](0022-materialization-reports-empty-extraction-not-ocr.md) | A materialization pass must report that it recovered nothing; it does not OCR |
 | [`0023`](0023-one-lecture-is-one-node-with-a-file-list.md) | One lecture is one node with a file list, not one node per file |
+| [`0102`](0102-the-skeleton-is-a-property-graph-and-routing-is-a-traversal.md) | The skeleton is a property graph and routing is a traversal over it; HNSW was scaffolding |
 
 ## Fields and identity — `0024`–`0037`
 
@@ -65,7 +66,7 @@ What a field is, when one exists, how a thing is named, and what was removed and
 | [`0036`](0036-a-note-points-at-a-node-and-its-category-is-open.md) | A note is an entity that points at a node; `category` is an open string set on purpose, and provenance confers no immutability |
 | [`0037`](0037-the-graveyard.md) | The graveyard: removed fields, their reasons, and a standing rule against re-adding them |
 
-## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092` · `0094`–`0100`
+## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092` · `0094`–`0101`
 
 What the coordinator holds while it decides, what it walks, and what it discards.
 
@@ -93,6 +94,7 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0098`](0098-the-render-spells-back-what-is-named-back.md) | The render uses the schema's own spelling for every name the coordinator can name back |
 | [`0099`](0099-0082-places-a-field-it-does-not-select-one.md) | `0082` places a field; it does not select one, and the first selection cut is the timestamps |
 | [`0100`](0100-ring-0-s-shape-is-not-settled.md) | Ring 0's shape is not settled, and reading it as a view is what shows why |
+| [`0101`](0101-routing-is-the-resolving-half-of-the-query.md) | Routing is the resolving half of the query: a system-held function from an intent to the paths that satisfy it |
 
 ## Inbound — `0047`–`0058` · `0086`–`0087` · `0090`
 
