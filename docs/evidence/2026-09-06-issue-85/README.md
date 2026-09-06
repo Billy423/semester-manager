@@ -4,7 +4,7 @@ The raw artifacts behind the resolution comment on [#85](https://github.com/Bill
 
 ## What is here
 
-- `preregistration.md` - written before the first review ran and not edited afterwards: the lenses, the thresholds, the judgment calls, and seven predictions of what the reviews would find.
+- `preregistration.md` - written before the first review ran and not edited afterwards: the lenses, the thresholds, the judgment calls, and seven predictions of what the reviews would find. It names the reviewed file as `resolution-85.md`; that file is `drafts/v1.md` here, renamed on copy.
 - `drafts/v1.md` to `drafts/v8.md` - every draft of the resolution comment. `v8.md` is what was posted.
 - `reviews/01` to `reviews/08` - every blind review, verbatim, with a header saying what the reviewer was given and withheld. Reviews 1 and 2 ran on `v1` under two lenses (attribution, falsification); reviews 3-8 ran the falsification lens on each subsequent draft, each by a fresh subagent blind to the earlier reviews. Reviews 7 and 8 used Claude Opus at the owner's request; the rest used Claude Sonnet.
 

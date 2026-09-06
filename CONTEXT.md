@@ -158,12 +158,12 @@ _Avoid_: calling it `summary` unqualified
 
 **ring 0**:
 The obligation layer under a residency policy: the fixed-shape, uniform-depth set of obligation fields the coordinator holds in its conversation context so it can tell where to look next. It governs **residency, not readability**, is field-grained rather than node-grained, and is not a third persisted thing.
-_Note_: **its shape is derived from routing** (`0101`): ring 0 is one routing result, held resident by policy. What its standing intent is, which fields its rows carry, and how they are banded and arranged are derived downstream (#86, then the ticket #84 assigns), and `0100`'s four clauses - admission, selection, arrangement, refresh - are re-derived from `0101` rather than standing on their own grounds. A ring 0 row is not a line (`0082`).
+_Note_: **its shape is derivable from routing** (`0101`): ring 0 is one routing result, held resident by policy. What its standing intent is, which fields its rows carry, and how they are banded and arranged are to be derived downstream (#86, then the ticket #84 assigns), and `0100`'s four clauses - admission, selection, arrangement, refresh - are to be re-derived from `0101` rather than standing on their own grounds. That derivation is owed, not done. A ring 0 row is not a line (`0082`).
 _Avoid_: *the projection* (bare) · *the obligation layer* as a synonym · the resident projection · ring 0 meaning what is **observable** · ring 0 meaning what is **readable** · **materialized view** - `0019` bars a third persisted thing, and `0089` hands a local file to the implementation rather than making it ring 0's nature · treating its shape as settled because `0038` names seven fields
 
 **band A** / **band B**:
 The two halves of ring 0's partition. **Band A, "active"**, is any obligation triggered by a near `due`, by a near `done_by`, or by work already in progress; **band B, "known"**, is everything else, including obligations with no date.
-_Note_: the partition is ring 0's **admission** clause and `0042` is overturnable once routing is defined (`0100`, ruled at #82). The two band names are this glossary's, not `0042`'s.
+_Note_: the partition is ring 0's **admission** clause and `0042` is overturnable now that routing is defined (`0101`; the permission was ruled at #82, `0100`). The overturn is #86's and has not run. The two band names are this glossary's, not `0042`'s.
 _Avoid_: *the active window* for band A - the window is one of three triggers, not the partition · urgent / backlog
 
 **coordinator**:

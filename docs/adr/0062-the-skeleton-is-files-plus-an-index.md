@@ -1,6 +1,6 @@
 # The skeleton is files plus an index rebuilt at load, not a database
 
-The skeleton needs a durable serialization plus an adjacency index rebuilt at load; all three graph operations are scans over that index, and **the load is cheap enough that per-invocation and resident are indistinguishable** - a 138-node, 137-link graph is 52 KB and parses in 0.27 ms. A graph engine would buy query planning; the read side is a chain over typed links (`0101`), and the claim - unmeasured, the measurement owed - is that an interpreter for such a chain over the link adjacency index and `0084`'s one indexed field is hand-writable at roughly 2,200 links for five courses. **The store is a different case and gets a different mechanism**: 62 MB of vectors should not be re-parsed per invocation.
+The skeleton needs a durable serialization plus an adjacency index rebuilt at load; every read is a scan over that index, and **the load is cheap enough that per-invocation and resident are indistinguishable** - a 138-node, 137-link graph is 52 KB and parses in 0.27 ms. A graph engine would buy query planning; the read side is a chain over typed links (`0101`), and the claim - unmeasured, the measurement owed - is that an interpreter for such a chain over the link adjacency index and `0084`'s one indexed field is hand-writable at roughly 2,200 links for five courses. **The store is a different case and gets a different mechanism**: 62 MB of vectors should not be re-parsed per invocation.
 
 **What would overturn this:**
 

@@ -32,7 +32,7 @@ An intent is stated in the skeleton's structural vocabulary: a node's kind, id a
 
 **Not bare ids**, because an assigned id says nothing about the record it names (`CONTEXT.md`, `id`). Each endpoint carries its own kind's deciding fields - one set per kind (`0095`) - and no depth; which fields decide the call for an obligation is downstream, and for `concept` and `artifact` it is the debt #17, #19 and #20 carry. **The set is symmetric**: every endpoint at one depth, and where paths differ in shape that asymmetry comes from the material, which `0039` calls legitimate. **The set is unordered**; arrangement is ring 0's clause. **An empty result names what it ranged over**, so a reader can tell *not in this range* from *not known* (`0081`); an intent the system cannot yet serve is refused, never returned empty.
 
-**Affordability is a separate question the type does not answer.** A resolve over a whole kind, or a repeat, may be too wide to hold. `0039`'s affordability is per-member depth and #12 item 6's bound is on free text; no landed record bounds a result's width.
+**Affordability is a separate question the type does not answer.** A resolve over a whole kind, or a repeat, may be too wide to hold. `0039`'s affordability is per-member depth and #12 item 6's bound is on free text; no landed record bounds a result's width. **What is known about cost:** a start by ref and one crossing is O(degree) (`0046`); a start by kind is O(kind); a join costs one sub-chain per member; a repeat is closure-sized. These are the only cost statements bearing on the open width gate, and #88 needs them for the repeat.
 
 ## The premise and the test
 
