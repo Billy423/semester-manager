@@ -15,7 +15,7 @@ a composed section      -> one line     0060
 
 **Anything reachable, one line**, because `0060` fixes the cost of depth: *"each level renders what is around it, and going one level deeper is one more call"*. A neighbour and a composed member are both one `look_at` away, so both are lines.
 
-**The consequence is that `0043`'s discard is enforced by shape rather than by discipline.** `0043` requires that what is fetched is dropped and warns that *"in a long-running agent conversation the discard is **not** automatic - compaction is lossy and unpredictable, not a discipline"*. Under this record **the only unbounded thing in a return is the node itself**; everything reachable from it is bounded to a line. A return cannot accumulate a neighbourhood, so there is nothing for the conversation to fail to discard.
+**The consequence is that `0043`'s discard is enforced by shape rather than by discipline.** `0043` requires that what is fetched is dropped and warns that *"in a long-running agent conversation the discard is **not** automatic - compaction is lossy and unpredictable, not a discipline"*. Under this record **the only unbounded thing in a return is the node itself**; everything reachable from it is bounded to a line. A return cannot accumulate a neighbourhood, so there is nothing for the conversation to fail to discard. **This is true of a block.** A resolve's return (`0101`) is bounded in depth - every endpoint is one line - and unbounded in width; what gates that width is not yet ruled.
 
 ## The line's field set is not derivable, and this record does not supply one
 
