@@ -47,7 +47,7 @@ The fragment a link points into - a section, a page, a method, a question - held
 _Avoid_: citation · fragment · anchor
 
 **closure**:
-The set of nodes reachable from one node by following one link kind transitively. It is single-source, and it is never an all-pairs matrix. Under `0101` it is the endpoint set of a repeated crossing; the crossing's paths are wider than the set.
+The set of nodes reachable from one node by following one link kind transitively. It is single-source, and it is never an all-pairs matrix. Under `0101` it is the set of last positions of a repeated crossing; the crossing's paths are wider than the set.
 _Avoid_: *transitive closure* as a matrix · *reachability* used for the one-hop walk
 
 ### The two axes
@@ -67,7 +67,7 @@ A kind, and a node: the unit a term's obligations are owed to. Its id is the sup
 _Avoid_: namespace · scope · treating it as a container rather than a node
 
 **obligation**:
-A thing with a deadline. The only layer that carries time, and the same nodes ring 0 is a projection of.
+A thing with a deadline. The only layer that carries time, and the nodes ring 0's standing intent starts from (`0103`).
 _Avoid_: task · assignment · *deadline* as the noun
 
 **concept**:
@@ -123,7 +123,7 @@ The relation asserting that an artifact teaches a concept as its subject. It is 
 _Avoid_: using `covers` for a mention - full-text finds mention, title-scoped finds coverage
 
 **applies**:
-The relation asserting that an artifact uses a concept without teaching it. It feeds closure and is never rendered as a neighbour; on a resolve's path it appears as the crossing that reached an endpoint (`0101`).
+The relation asserting that an artifact uses a concept without teaching it. It feeds closure and is never rendered as a neighbour; on a resolve's path it appears as the crossing that reached a position (`0101`).
 _Avoid_: uses · *mentions* (that name belonged to the cut announcement link)
 
 ### The store's vocabulary
@@ -157,14 +157,9 @@ _Avoid_: calling it `summary` unqualified
 ### Residency and the read path
 
 **ring 0**:
-The obligation layer under a residency policy: the fixed-shape, uniform-depth set of obligation fields the coordinator holds in its conversation context so it can tell where to look next. It governs **residency, not readability**, is field-grained rather than node-grained, and is not a third persisted thing.
-_Note_: **its shape is derivable from routing** (`0101`): ring 0 is one routing result, held resident by policy. What its standing intent is, which fields its rows carry, and how they are banded and arranged are to be derived downstream (#86, then the ticket #84 assigns), and `0100`'s four clauses - admission, selection, arrangement, refresh - are to be re-derived from `0101` rather than standing on their own grounds. That derivation is owed, not done. A ring 0 row is not a line (`0082`).
-_Avoid_: *the projection* (bare) · *the obligation layer* as a synonym · the resident projection · ring 0 meaning what is **observable** · ring 0 meaning what is **readable** · **materialized view** - `0019` bars a third persisted thing, and `0089` hands a local file to the implementation rather than making it ring 0's nature · treating its shape as settled because `0038` names seven fields
-
-**band A** / **band B**:
-The two halves of ring 0's partition. **Band A, "active"**, is any obligation triggered by a near `due`, by a near `done_by`, or by work already in progress; **band B, "known"**, is everything else, including obligations with no date.
-_Note_: the partition is ring 0's **admission** clause and `0042` is overturnable now that routing is defined (`0101`; the permission was ruled at #82, `0100`). The overturn is #86's and has not run. The two band names are this glossary's, not `0042`'s.
-_Avoid_: *the active window* for band A - the window is one of three triggers, not the partition · urgent / backlog
+The obligation layer under a residency policy: one routing result held resident by policy (`0101`), the path from every obligation to its progress record (`0103`), which the coordinator holds in its conversation context so it can tell where to look next. It governs **residency, not readability**, is field-grained rather than node-grained, and is not a third persisted thing. Its rows carry one field set, at two positions; how they are arranged is #82's.
+_Note_: a ring 0 row is not a line (`0082`). The three triggers that once partitioned it into two bands are the coordinator's judgment rule for *near* (`0042`).
+_Avoid_: *the projection* (bare) · *the obligation layer* as a synonym · the resident projection · ring 0 meaning what is **observable** · ring 0 meaning what is **readable** · **materialized view** - `0019` bars a third persisted thing, and `0089` hands a local file to the implementation rather than making it ring 0's nature · **band A** / **band B** - the partition dissolved at `0103`; *active* is a judgment the coordinator makes, not a set the system holds
 
 **coordinator**:
 The single long-running agent conversation the owner talks to: it holds ring 0, dispatches, walks the graph and writes the plan. A **conversation**, not a process - its scale is days to weeks, and **resident** means held in the conversation's context, never in a process's memory.
@@ -183,8 +178,8 @@ A node's own render under `look_at`. Its **sections are cut by source** (`0094`)
 _Avoid_: record - that is the stored thing, not its render · view · *the full node* · treating the block as one shape rather than one per kind · reading `0082` as deciding the sections, which it says it does not reach
 
 **the line**:
-The render of a node that is one `look_at` away - **one self-closing element named for its own kind**, `<obligation id="51" …/>`, carrying only what decides whether it is worth that call. It appears in two places: inside an `<edge>`, and inside a composed section (`0094`). Per kind it is **one** field set that does not vary per row: obligation's is ring 0's **band B** plus the edge's `type`, course's is `id` `name` `term`. `sticky_note` and `progress` need none - they arrive through their own channel rather than as neighbours - and the debt for `artifact` and `concept` travels with their layers, deferred at #20, #19 and #17. A `Ref`-typed **field** is not a line; it is a bare pointer. The element was `<ref>` until #62, then `<glance>` until #80 retired it, because `0082`'s own first clause makes the element name the kind.
-_Note_: the **field set** is still not derivable - obligation's is a transfer from `0038`'s residency set, and a new kind's is one ruling per kind (`0095`). A line is what a path's endpoint renders as inside a block (`0101`); a ring 0 row is not a line (`0082`).
+The render of a node that is one `look_at` away - **one self-closing element named for its own kind**, `<obligation id="51" …/>`, carrying only what decides whether it is worth that call. It appears in two places: inside an `<edge>`, and inside a composed section (`0094`). Per kind it is **one** field set that does not vary per row: obligation's is owed at #90 since #86 dissolved the band it was transferred from, with `0096`'s example the landed shape until it is derived; course's is `id` `name` `term`. `sticky_note` and `progress` need none - they arrive through their own channel rather than as neighbours - and the debt for `artifact` and `concept` travels with their layers, deferred at #20, #19 and #17. A `Ref`-typed **field** is not a line; it is a bare pointer. The element was `<ref>` until #62, then `<glance>` until #80 retired it, because `0082`'s own first clause makes the element name the kind.
+_Note_: the **field set** is one ruling per kind (`0095`), and obligation's is owed at #90 (`0103`). A line is what a path's position renders as inside a block when resolve enters through fetch (`0084`, `0101`); a routing path's position carries a position's field set and not a line, and a ring 0 row is not a line (`0082`, `0103`).
 _Avoid_: *summary* - that is a written object and only `artifact` has one · preview · row · reading *line* as a physical line of output · calling a neighbour's line a `<glance>`
 
 **routing**:
@@ -192,8 +187,8 @@ The resolving half of the query: a system-held function from an intent, stated i
 _Avoid_: search · retrieval · navigation · *the walk* used for routing as a whole - the walk is one crossing · routing meaning fetch, which is `look_at` · a property of a render · a position the coordinator holds
 
 **path**:
-What routing returns: the chain a member arrived by - node, relation, node, ... - ending at an address whose endpoint carries what decides whether it is worth the next call. Paths rather than endpoints, because a judgment across obligations is about their relations and an endpoint set has no position for one. Unordered as a set; symmetric in depth.
-_Avoid_: result row · hit · *node set* for what routing returns - closure is the endpoint set of a path set, not the path set
+What routing returns: the chain a member arrived by - node, relation, node, ... - ending at a position, which is an address where it is non-empty. Each node position carries one field set for its kind, of line depth, derived for the judgment (`0103`); a position may be empty where an optional crossing found nothing, and the empty position names the relation it ranged over. Paths rather than endpoints, because a judgment across obligations is about their relations and an endpoint set has no position for one. Unordered as a set; symmetric in depth. What a relation position carries is the grammar's.
+_Avoid_: result row · hit · *node set* for what routing returns - closure is the set of last positions of a path set, not the path set
 
 **dispatch**:
 Sending a question out of the coordinator's context - to a subagent, a task session, or the owner himself - and receiving back a value in the same shape as every peer's. The context that produced the value stays outside.

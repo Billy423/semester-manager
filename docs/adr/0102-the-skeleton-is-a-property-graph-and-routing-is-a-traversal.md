@@ -17,7 +17,7 @@
 | an engine with a planner | files plus an adjacency index over links rebuilt at load, and an indexed field for the one Ref crossing that exists | `0062` `0084` |
 | a vector index on the graph | two persisted things coupled by one field | `0019` |
 | any caller, full depth | an observation contract: symmetry, discard, residency by policy | `0039` `0043` `0044` |
-| every traversal renders | `applies` is never rendered as a neighbour; on a path it appears as the crossing that reached an endpoint | `CONTEXT.md` |
+| every traversal renders | `applies` is never rendered as a neighbour; on a path it appears as the crossing that reached a position | `CONTEXT.md` |
 
 **The ninth row is the boundary of the whole analogy.** A graph database has no concept of what its caller may hold, and half of this repository's records are about that. The commitment covers the skeleton and routing; it does not cover the system.
 

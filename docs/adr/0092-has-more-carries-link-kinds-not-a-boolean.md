@@ -1,6 +1,6 @@
 # `has-more` carries the link kinds present on the node, not a boolean and not a count
 
-`0038` puts `has-more` among band A's routing fields without saying what it holds. It holds **the set of link kinds present on that node, drawn from `0012`'s table** - today only `about` and, by signature, `builds-on`; after the artifact and concept layers, also `spec`, `requires` and `prepares-for`.
+`0038` puts `has-more` among ring 0's row fields without saying what it holds. It holds **the set of link kinds present on that node, drawn from `0012`'s table** - today only `about` and, by signature, `builds-on`; after the artifact and concept layers, also `spec`, `requires` and `prepares-for`.
 
 **The ground is not information content, which today equals a boolean's.** It is that the vocabulary is **derived**. `0012` is a closed table, so the set gains members as those layers land without this field's description changing a word - and by #12 item 8, a tool definition whose description does not change is not a new version. A boolean or a count would each have to be re-ruled at G5 against data that does not exist yet.
 
@@ -24,4 +24,4 @@
 
 `0082` derives a render from a kind's field table by four rules. **`has-more` is in no field table**, and neither is `role`, which is a `Link` field (`0017`). That record declares one exception today, for `grade_share`'s qualifier, and owes a second covering these two.
 
-Source: ruled at #62 (Billy, 2026-09-02). The field's membership in band A is `0038`'s; its value is this record's.
+Source: ruled at #62 (Billy, 2026-09-02). The field's membership in ring 0's row is `0038`'s, re-derived at `0103`; its value is this record's.
