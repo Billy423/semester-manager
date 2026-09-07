@@ -1,14 +1,15 @@
-# Ring 0's shape is not settled, and reading it as a view is what shows why
+# Ring 0's shape was not settled until #86, and reading it as a view is what showed why
 
 `0094` carved ring 0 out of #80 on the ground that it *"is a projection over obligations rather than a node"*, and never said what a projection **is**. This record reads it as a **view** and reports what that reading shows.
 
 **The reading is a lens, declared as one.** It was adopted to answer a single question - *why does ring 0 have no shape a render can be derived from* - and it earns its place by separating parts that three records had each fixed alone. **The four clauses below are not claimed to be exhaustive**, and nothing here is settled by the vocabulary: where the lens and a landed record disagree, the record wins.
 
-**Not a *materialized* view, and the adjective is not a detail.** `0019` rules that ring 0 *"is not a third: residency is an access policy over obligation nodes' fields, not a separate store."* `0089` separately permits a local file as *"the **implementation's** choice"*, a *"regenerable render serving recovery after compaction, not a source of truth"*. Calling ring 0 materialized would decide by vocabulary what `0019` bars and `0089` hands to the implementation.
+**Since #86 the admission and selection clauses are derived (`0103`), and this record's diagnosis of why they were not stands as the record of that.** **Not a *materialized* view, and the adjective is not a detail.** `0019` rules that ring 0 *"is not a third: residency is an access policy over the fields the standing intent's positions carry … not a separate store."* `0089` separately permits a local file as *"the **implementation's** choice"*, a *"regenerable render serving recovery after compaction, not a source of truth"*. Calling ring 0 materialized would decide by vocabulary what `0019` bars and `0089` hands to the implementation.
 
 ```
-admission    which rows enter        0042   ruled; overturnable, see below
-selection    which fields            0038   ruled; not derived
+admission    which rows enter        0103   derived at #86: every obligation, no predicate
+selection    which fields            0103   derived at #86; 0038 restated to match
+field set    which rows carry more   0042   was read here as admission; a per-row field-set partition, dissolved at #86
 arrangement  how rows are laid out   0041   order ruled; grouping struck at #82
 refresh      how it is kept current  0089   ruled on a ground of its own, and not orthogonal
 ```
@@ -17,7 +18,7 @@ The clause names are this repository's own where it has one: **selection** is `0
 
 ## The purpose sentence exists, and nothing is derived from it
 
-`CONTEXT.md` states ring 0's purpose: *"so it can tell where to look next"*. #82 ruled that sentence correct and refused to widen it. **What is undefined is routing** - the mechanism the sentence names - and no clause is derived from either. **Since #85 (2026-09-06) routing is defined at `0101`**; the clauses' re-derivation from it is #86's and has not yet run, so everything below about the clauses' standing still holds.
+`CONTEXT.md` states ring 0's purpose: *"so it can tell where to look next"*. #82 ruled that sentence correct and refused to widen it. **What is undefined is routing** - the mechanism the sentence names - and no clause is derived from either. **Since #85 (2026-09-06) routing is defined at `0101`, and at #86 the admission and selection clauses were re-derived from it (`0103`)**; what follows is the diagnosis as it stood before that derivation ran.
 
 `0038` applies the purpose as a **test over `obligation`'s existing field table**: `parts` is out because it answers *what is this about* rather than *where do I look next*. Filtering candidates against a criterion is construction. `0041` grounds its grouping on `0039`'s symmetry rule instead. `0042` partitions on three triggers over the material.
 
@@ -27,13 +28,13 @@ The clause names are this repository's own where it has one: **selection** is `0
 
 ## What each clause's standing is
 
-**Admission - `0042`, ruled and overturnable.** Three independent triggers put a row in band A; everything else, *"including obligations with no date"*, is band B. #82 ruled that this clause may be overturned once routing is defined, together with what defines *the plan* and what defines *course information*. **`0042` does not itself say that ring 0 ranges over every obligation in a semester**; the nearest statement is `CONTEXT.md`'s `obligation` entry, *"the same nodes ring 0 is a projection of"*, and `0038`'s sizing figure rests on that premise without citing anything.
+**Admission - derived at #86 (`0103`): every obligation, no predicate. `0042` was read here as the admission clause and is a per-row field-set partition, dissolved at #86.** Its three triggers put a row in band A; everything else, *"including obligations with no date"*, was band B. #82 ruled that this clause could be overturned once routing was defined, together with what defines *the plan* and what defines *course information*; #86 dissolved the partition and did not overturn the importance sentence. **`0042` does not itself say that ring 0 ranges over every obligation in a semester**; the nearest statement is `CONTEXT.md`'s `obligation` entry, *"the same nodes ring 0 is a projection of"*, and `0038`'s sizing figure rests on that premise without citing anything.
 
-**Selection - `0038`, ruled and not derived.** Which seven fields are **in** rests entirely on the test above. Its **exclusions carry arguments of their own**, and `grade_share`'s survives audit against the 2c03 corpus: nine assignments at 5 plus 10, 10 and 30 is **95**, the missing 5% is the tutorial requirement whose own note records that it *"has no obligation row"*, and two 1% bonuses sit outside the 100. That corpus was supplied on 2026-09-04 and **is not held in this repository**, so the audit is not reproducible from this checkout. **An argument that stands is still not a derivation**, so neither half of the clause is settled while its re-derivation from routing (`0101`) has not run.
+**Selection - `0038`, first ruled and not derived, then derived at #86 (`0103`).** Which seven fields were **in** rested entirely on the test above. Its **exclusions carry arguments of their own**, and `grade_share`'s survives audit against the 2c03 corpus: nine assignments at 5 plus 10, 10 and 30 is **95**, the missing 5% is the tutorial requirement whose own note records that it *"has no obligation row"*, and two 1% bonuses sit outside the 100. That corpus was supplied on 2026-09-04 and **is not held in this repository**, so the audit is not reproducible from this checkout. **An argument that stands is still not a derivation**; the re-derivation from routing ran at #86 and landed on the same seven with `state` re-typed as a position (`0103`).
 
 **Arrangement - `0041`, half ruled and half vacant.** The order is ruled and untouched: `due` ascending, nulls last, among nulls by `done_by`, ties broken by the handle, **never array order**, on the ground that array order is insertion order is write history - which owes nothing to routing, and which `0082` inherits. The **grouping** is struck at #82 and struck at source in `0041`: it fixed a value on `0039`'s symmetry rule rather than deriving it from what the view is for.
 
-**Refresh - `0089`, and it is not orthogonal to the others.** Whole lines rather than a field-level delta, because a delta's baseline is eaten silently by compaction (`0043`). That ground is this system's own and needs no purpose. **Two qualifications the lens would otherwise hide:** `0089` parks the refresh **cadence** - *"the deciding variable is how often a refresh happens… it is not settled here"* - and what a refresh **returns** is a line, whose field set is band B, which is the selection clause. Settling selection changes what refresh delivers.
+**Refresh - `0089`, and it is not orthogonal to the others.** Whole lines rather than a field-level delta, because a delta's baseline is eaten silently by compaction (`0043`). That ground is this system's own and needs no purpose. **Two qualifications the lens would otherwise hide:** `0089` parks the refresh **cadence** - *"the deciding variable is how often a refresh happens… it is not settled here"* - and what a refresh **returns** is a row, whose field set is derived at `0103`, which is the selection clause. Settling selection changed what refresh delivers (`0089`).
 
 ## Why the vacancy was not visible
 

@@ -66,17 +66,17 @@ What a field is, when one exists, how a thing is named, and what was removed and
 | [`0036`](0036-a-note-points-at-a-node-and-its-category-is-open.md) | A note is an entity that points at a node; `category` is an open string set on purpose, and provenance confers no immutability |
 | [`0037`](0037-the-graveyard.md) | The graveyard: removed fields, their reasons, and a standing rule against re-adding them |
 
-## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092` · `0094`–`0101`
+## The observation contract — `0038`–`0046` · `0082`–`0085` · `0089` · `0092` · `0094`–`0101` · `0103`
 
 What the coordinator holds while it decides, what it walks, and what it discards.
 
 | | |
 |---|---|
-| [`0038`](0038-ring-0-carries-seven-routing-fields.md) | Ring 0 carries seven routing fields; `parts` and `grade_share` are excluded, and `grade_share`'s exclusion rests on a corpus argument |
+| [`0038`](0038-ring-0-carries-seven-routing-fields.md) | Ring 0's row carries seven fields at its obligation position and four at its progress position, derived at #86 from the judgments; `parts` and `grade_share` are excluded, and `grade_share`'s exclusion rests on a corpus argument |
 | [`0039`](0039-symmetry-not-shallowness.md) | The observation invariant is symmetry, not shallowness, and it is scoped to the set the judgment ranges over |
 | [`0040`](0040-renderer-truncation-is-asymmetry.md) | Renderer-introduced truncation is asymmetry, so a fixed-width table is not the course level's shape |
 | [`0041`](0041-projection-order-comes-from-the-material.md) | The projection's order is derived from the material, never from write history |
-| [`0042`](0042-active-is-three-independent-triggers.md) | Active is three independent triggers on one question, not a time window with exceptions |
+| [`0042`](0042-active-is-three-independent-triggers.md) | Active is three independent triggers on one question, and they are the coordinator's judgment rule rather than ring 0's partition |
 | [`0043`](0043-expansions-are-discarded-never-sedimented.md) | What is fetched is dropped; depth never comes back into the conversation |
 | [`0044`](0044-the-coordinator-holds-ring-0-not-the-skeleton.md) | The coordinator holds ring 0 in its context and queries the skeleton on demand |
 | [`0045`](0045-store-output-enters-only-as-a-conclusion.md) | Store output enters the coordinator only as a conclusion; the context that produced it is discarded, and who produced it is irrelevant |
@@ -85,7 +85,7 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0083`](0083-one-render-serves-both-readers.md) | The render is XML, and one render serves both readers, replacing the human-branch / machine-branch split |
 | [`0084`](0084-look-at-is-a-composed-view-not-a-pure-walk.md) | `look_at` is a composed view whose content each kind decides, not a pure edge walk |
 | [`0085`](0085-the-question-parameter-is-instrumentation.md) | The `question` parameter is development instrumentation and is not in the production signature |
-| [`0089`](0089-the-read-side-is-two-verbs-and-refresh-returns-whole-lines.md) | The read side is two verbs, and the refresh returns whole lines rather than a delta |
+| [`0089`](0089-the-read-side-is-two-verbs-and-refresh-returns-whole-rows.md) | The read side is two verbs, and the refresh returns whole rows rather than a delta |
 | [`0092`](0092-has-more-carries-link-kinds-not-a-boolean.md) | `has-more` carries the link kinds present on the node, not a boolean and not a count |
 | [`0094`](0094-a-render-s-sections-are-cut-by-source.md) | A render's sections are cut by source, and a composed batch is a fourth source |
 | [`0095`](0095-each-section-carries-its-own-depth.md) | Each section carries its own depth, and that shape is what enforces the discard |
@@ -93,8 +93,9 @@ What the coordinator holds while it decides, what it walks, and what it discards
 | [`0097`](0097-an-id-marks-an-object-and-a-pair-carries-content.md) | An `id` marks an addressable object, an open/close pair carries content, and a member omits what its container fixes |
 | [`0098`](0098-the-render-spells-back-what-is-named-back.md) | The render uses the schema's own spelling for every name the coordinator can name back |
 | [`0099`](0099-0082-places-a-field-it-does-not-select-one.md) | `0082` places a field; it does not select one, and the first selection cut is the timestamps |
-| [`0100`](0100-ring-0-s-shape-is-not-settled.md) | Ring 0's shape is not settled, and reading it as a view is what shows why |
+| [`0100`](0100-ring-0-s-shape-is-not-settled.md) | Ring 0's shape was not settled until #86, and reading it as a view is what showed why |
 | [`0101`](0101-routing-is-the-resolving-half-of-the-query.md) | Routing is the resolving half of the query: a system-held function from an intent to the paths that satisfy it |
+| [`0103`](0103-ring-0-s-standing-intent-is-a-path-from-every-obligation-to-its-progress.md) | Ring 0's standing intent is a path from every obligation to its progress, and its rows carry one field set |
 
 ## Inbound — `0047`–`0058` · `0086`–`0087` · `0090`
 
